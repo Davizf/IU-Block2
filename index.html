@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Travel Opinion</title>
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <script type="text/javascript" src="animation/animation.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script language="javascript" type="text/javascript" src="js/jquery.js"></script>
+    <script language="javascript" type="text/javascript" src="js/popup.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <!--Logo-->
+      <div class="logo">
+        <img src="images/icon.png" alt="icon" width="50" height="50">
+      </div>
+      <!--Logo name-->
+      <div class="logoName">
+        <b>Travel Opinion</b>
+      </div>
+
+      <!--Menu-->
+      <nav class="menu">
+        <ul>
+          <li><a href = "">Restaurant</a></li>
+          <li><a href = "">Hotel</a></li>
+          <li><a href = "">Tourist Point</a></li>
+          <li><a href = "">Contact</a></li>
+        </ul>
+      </nav>
+
+    </header>
+
+    <section>
+      <!--The left container-->
+      <div class="leftBox">
+
+        <div class="pInfo">
+
+          <div class = "user">
+            <div class="pInfoPhoto">
+              <img src="images/BillGates.png" alt="" width="150" height="150">
+            </div>
+
+            <div class="username">
+              <p>Bill Gates</p>
+            </div>
+
+          </div>
+
+          <div class="pInfoDetail">
+            <h4 onclick="pInfoDetail()"><a href="#">Personal Information<a></h4>
+            <p>
+              Bill Gates is an American business magnate, investor, author, philanthropist, humanitarian,
+              and principal founder of Microsoft Corporation.
+            </p>
+          </div>
+
+        </div>  <!--  End pInfo -->
+
+        <div class="opinion">
+          <h4 onclick="opinion()"><a href="#">Last opinions</a></h4>
+          <div class="opinionDetail">
+            <a href = "#" onclick="opinionBox1();">Shinta Mani Shack</a>
+            <p>
+              The hotel is simply spectacular.
+              The most welcoming welcome.
+              The staff goes out of their way to make the stay pleasant.
+              The beautiful rooms, very spacious and elegantly decorated.
+            </p>
+            <a href = "#" onclick="opinionBox2();">Ikos Olivia</a>
+            <p>
+              A great luxury hotel, impressive SPA with an amazing, professional and very friendly staff.
+              One of the best massages of my life !!
+              This hotel is excellent and the attention of absolutely all the staff is wonderful.
+              I definitely recommend this hotel.
+            </p>
+            <a href = "#" onclick="opinionBox3();">Excellence Playa Mujeres</a>
+            <p>
+              The facilities and everything are incredible.
+              We were the only Mexicans and they made us feel at home.
+              Diego the bartender of the prelude is the best! Congratulations to him.
+              They fixed everything we needed and we definitely came back.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="Preferences">
+          <h4><u>My Preferences</u></h4>
+          <div class="buttonAdd">
+            <button onclick="addKeyword()">+</button>
+          </div>
+        </div>
+
+
+
+
+        <div id="keyword1">
+          <form><input class="prefeBox" id="k1" type="text"  value="Friends"></form>
+          <div class="buttonX">
+            <button onclick="deleteKeyword('keyword1','k1')">x</button>
+          </div>
+        </div>
+        <div id="keyword2">
+          <form><input class="prefeBox" id='k2' type="text"  value="Weekend"></form>
+          <div class="buttonX">
+            <button onclick="deleteKeyword('keyword2','k2')">x</button>
+          </div>
+        </div>
+        <div id="keyword3">
+          <form><input class="prefeBox" id='k3' type="text"  value="Volunteer"></form>
+          <div class="buttonX">
+            <button onclick="deleteKeyword('keyword3','k3')">x</button>
+          </div>
+        </div>
+        <div id="keyword4">
+          <form><input class="prefeBox"id='k4' type="text"  value=""></form>
+          <div class="buttonX">
+            <button onclick="deleteKeyword('keyword4','k4')">x</button>
+          </div>
+        </div>
+        <div id="keyword5">
+          <form><input class="prefeBox" id='k5' type="text" value=""></form>
+          <div class="buttonX">
+            <button onclick="deleteKeyword('keyword5','k5')">x</button>
+          </div>
+        </div>
+        <div id="keyword6">
+          <form><input class="prefeBox" id='k6' type="text"  value=""></form>
+          <div class="buttonX">
+            <button onclick="deleteKeyword('keyword6','k6')">x</button>
+          </div>
+        </div>
+
+
+
+
+
+
+
+      </div>  <!--End the div leftBox-->
+
+      <div class="rightBox">
+
+        <div id = "exerciseA">
+          <div class="pInfoBox">
+
+            <h2>Personal Information</h2>
+            <form><input class="normalBox" type="text" name="firstName" value="Name"></form>
+            <form><input class="normalBox" type="text" name="sureName" value="Surename"></form>
+            <form><input class="longBox" type="text" name="email" value="Email"></form>
+            <form><input class="normalBox" type="text" name="adress" value="Adress"></form>
+            <form><input class="normalBox" type="text" name="mobilePhone" value="Mobilephone"></form>
+            <form><input class="longBox" type="text" name="birthdate" value="Birthdate"></form>
+
+           <div class="activity">
+             <h2> My Activity in the App </h2>
+              <button class = "circleBox">7<br/><br/>Points</button>
+              <button class = "circleBox">2<br/><br/>Level</button>
+              <button class = "circleBox">3<br/><br/>Opinions</button>
+              <button class = "circleBox">5<br/><br/>Photos</button>
+           </div>
+         </div>
+        </div>
+
+
+
+      <div id = "exerciseB">
+        <h2>Last Opinions</h2>
+
+        <div class="rightBoxUp">
+          <div class="imageOpinion">
+            <img src="images/shinta.png" alt="" width="150" height="150">
+          </div>
+          <div class= "detailOpinion">
+            <h4><a href = "#" onclick="opinionBox1();">Shinta Mani Shack</a></h4>
+            <p>Oum Khun St, Krong Siem Reap 00000, Camboya</p>
+            <p>08 October 2016  - Daniel Gonzalez</p>
+          </div>
+          <div class="review">
+            <p>
+              The hotel is simply spectacular.
+              The most welcoming welcome.
+              The staff goes out of their way to make the stay pleasant.
+              The beautiful rooms, very spacious and elegantly decorated.
+            </p>
+          </div>
+        </div>
+
+        <div class="rightBoxDown">
+          <div class="imageOpinion">
+            <img src="images/IkosOlivia.png" alt="" width="150" height="150">
+          </div>
+          <div class= "detailOpinion">
+            <h4><a href = "#" onclick="opinionBox2();">Ikos Olivia</a></h4>
+            <p>Thesi Rahones, Gerakini, Halkidiki 631 00, Grecia</p>
+            <p>16 October 2015  - Raquel Diaz</p>
+          </div>
+          <div class="review">
+            <p>
+              A great luxury hotel, impressive SPA with an amazing, professional and very friendly staff.
+              One of the best massages of my life !!
+              This hotel is excellent and the attention of absolutely all the staff is wonderful.
+              I definitely recommend this hotel.
+            </p>
+          </div>
+        </div>
+
+        <div class="hiddenRightBoxDown">
+          <div class="imageOpinion">
+            <img src="images/ExcellencePlayaMujeres.png" alt="" width="150" height="150">
+          </div>
+          <div class= "detailOpinion">
+            <h4><a href = "#" onclick="opinionBox3();">Excellence Playa Mujeres</a></h4>
+            <p>Av. Bonampak, México</p>
+            <p>02 October 2014  - Tomas de la Rosa</p>
+          </div>
+          <div class="review">
+            <p>
+              The facilities and everything are incredible.
+              We were the only Mexicans and they made us feel at home.
+              Diego the bartender of the prelude is the best! Congratulations to him.
+              They fixed everything we needed and we definitely came back.
+            </p>
+          </div>
+        </div>
+
+        <div class="refresh">
+          <p>load more</p>
+          <a href = "">
+            <img src="images/refresh.png" alt="refresh icon" width="50" height="50">
+          </a>
+
+        </div>
+
+      </div>
+
+      </div>  <!--End the div rightBox-->
+
+      <!-- popup  -->
+      <div id ="popup1">
+        <button class="cerrar" onclick="cerrarPopup('popup1');">x</button>
+        <img src="images/shinta.png" alt="" width="200" height="200">
+        <h4>Shinta Mani Shack</h4>
+        <p>
+          Oum Khun St, Krong Siem Reap 00000, Camboya<br/>
+          Set in the French Quarter of Siem Reap.<br/>
+          +855-63-964-123<br/>
+          Hotel - First Class<br/>
+          Facebook: @ShintaManiAngkor
+        </p>
+        <a href ="https://www.shintamani.com/">https://www.shintamani.com/</a>
+        <p id="op">
+          08 October 2016  - Daniel Gonzalez<br/>
+          The hotel is simply spectacular.
+          The most welcoming welcome.
+          The staff goes out of their way to make the stay pleasant.
+          The beautiful rooms, very spacious and elegantly decorated.
+        </p>
+
+      </div>
+
+      <div id ="popup2">
+        <button class="cerrar" onclick="cerrarPopup('popup2');">x</button>
+        <img src="images/IkosOlivia.png" alt="" width="200" height="200">
+        <h4>Ikos Olivia</h4>
+        <p>
+          Thesi Rahones, Gerakini, Halkidiki 631 00, Grecia<br/>
+          Amplias habitaciones, suites y bungalows con vistas panorámicas al mar.<br/>
+          +30 23730 95100<br/>
+          Hotel - Economy Class<br/>
+          Facebook: @ikosresorts
+        </p>
+        <a href ="http://ikosresorts.com/es/rooms/olivia/">http://ikosresorts.com/es/rooms/olivia/</a>
+        <p id="op">
+          16 October 2015  - Raquel Diaz<br/>
+          A great luxury hotel, impressive SPA with an amazing, professional and very friendly staff.
+          One of the best massages of my life !!
+          This hotel is excellent and the attention of absolutely all the staff is wonderful.
+          I definitely recommend this hotel.
+        </p>
+
+      </div>
+
+      <div id ="popup3">
+        <button class="cerrar" onclick="cerrarPopup('popup3');">x</button>
+        <img src="images/ExcellencePlayaMujeres.png" alt="" width="200" height="200">
+        <h4>Excellence Playa Mujeres</h4>
+        <p>
+          Av. Bonampak, México<br/>
+          The luxury oasis of Cancun.<br/>
+          +0800 051 6244<br/>
+          Hotel - First Class<br/>
+          Facebook: @ExcellenceGroupLuxuryHotelsAndResorts
+        </p>
+        <a href ="https://www.excellenceresorts.com/resorts/excellence-playa-mujeres/">https://www.excellenceresorts.com/resorts/excellence-playa-mujeres/</a>
+        <p id="op">
+          02 October 2014  - Tomas de la Rosa<br/>
+          The facilities and everything are incredible.
+          We were the only Mexicans and they made us feel at home.
+          Diego the bartender of the prelude is the best! Congratulations to him.
+          They fixed everything we needed and we definitely came back.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <footer>
+
+      <div class="copyright">
+        <p>Copyright @2018 All right reserved</p>
+      </div>
+
+      <div class="socialNet">
+        <img src="images/twitter.png" alt="twitter icon" width="30" height="30">
+        <img src="images/facebook.png" alt="facebook icon" width="30" height="30">
+        <img src="images/instagram.png" alt="instagram icon" width="30" height="30">
+        <img src="images/linkedin.png" alt="linkedin icon" width="30" height="30">
+      </div>
+      <div class="hiddenFooter">
+        <div class="hiddenOp">
+          <img src="images/personal.png" alt="" width="40" height="40">
+          <p onclick="pInfoDetail()"><a href="#">personal</a></p>
+        </div>
+        <div class="hiddenOp">
+          <img src="images/opinions.png" alt="" width="40" height="40">
+          <p onclick="opinion()"><a href="#">opinions</a></p>
+        </div>
+        <div class="hiddenOp">
+          <img src="images/preferences.png" alt="" width="40" height="40">
+          <p>preferences</p>
+        </div>
+      </div>
+    </footer>  <!--Here ends the footer-->
+
+  </body>
+</html>
