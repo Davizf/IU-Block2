@@ -4,7 +4,6 @@ header{
   height: 75px;
   background-color: #28A828;
 }
-
 .logo{
   margin: 10px;
   width: 50px;
@@ -289,11 +288,10 @@ section{
 .refresh{
   margin-left: 5%;
   width: 90%;
-
 }
 
 .refresh p{
-  padding-top: 20%;
+  padding-top: 10%;
   margin-left: 40%;
 }
 
@@ -591,9 +589,7 @@ footer{
 
 }
 
-#exerciseA{
-  display: none;
-}
+/* Block 2 Part 1*/
 
 #exerciseB{
   display: none;
@@ -714,4 +710,32 @@ footer{
   padding-left: 10px;
   text-decoration: none;
   color: #234C6C;
+}
+
+
+
+/*  Block 2 Part 2*/
+/*
+.leftBox{
+  display: none;
+}
+.rightBox{
+  display: none;
+}
+*/
+#hiddenMenu{
+  display: none;
+}
+#registerBox{
+  color: #398DA7;
+  height: auto;
+  margin-bottom: 20px;
+  /**/display: none;
+}
+#registerBox h4{
+  clear: both;
+}
+#registerBox input[type=text]{
+  width: 15%;
+  margin-left: 5em;
 }

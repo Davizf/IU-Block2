@@ -1,3 +1,4 @@
+<!--  we use class in Block 1   we use id in Block 2-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -23,14 +24,26 @@
       </div>
 
       <!--Menu-->
-      <nav class="menu">
-        <ul>
-          <li><a href = "">Restaurant</a></li>
-          <li><a href = "">Hotel</a></li>
-          <li><a href = "">Tourist Point</a></li>
-          <li><a href = "">Contact</a></li>
-        </ul>
-      </nav>
+      <div id="menuBlock1">
+        <nav class="menu">
+          <ul>
+            <li><a href = "#">Restaurant</a></li>
+            <li><a href = "#">Hotel</a></li>
+            <li><a href = "#">Contact</a></li>
+            <li><a href = "#" onclick="logout();">Logout</a></li>
+          </ul>
+        </nav>
+      </div>
+
+
+      <div id="hiddenMenu">
+        <nav class="menu">
+          <ul>
+            <li><a href = "#" onclick="register();">Register</a></li>
+            <li><a href = "#">Login</a></li>
+          </ul>
+        </nav>
+      </div>
 
     </header>
 
@@ -38,207 +51,209 @@
       <!--The left container-->
       <div class="leftBox">
 
-        <div class="pInfo">
+        <div id="leftContent">
 
-          <div class = "user">
-            <div class="pInfoPhoto">
-              <img src="images/BillGates.png" alt="" width="150" height="150">
+          <div class="pInfo">
+
+            <div class = "user">
+              <div class="pInfoPhoto">
+                <img src="images/BillGates.png" alt="" width="150" height="150">
+              </div>
+
+              <div class="username">
+                <p>Bill Gates</p>
+              </div>
+
             </div>
 
-            <div class="username">
-              <p>Bill Gates</p>
+            <div class="pInfoDetail">
+              <h4 onclick="pInfoDetail()"><a href="#">Personal Information<a></h4>
+              <p>
+                Bill Gates is an American business magnate, investor, author, philanthropist, humanitarian,
+                and principal founder of Microsoft Corporation.
+              </p>
+            </div>
+
+          </div>  <!--  End pInfo -->
+
+          <div class="opinion">
+            <h4 onclick="opinion()"><a href="#">Last opinions</a></h4>
+            <div class="opinionDetail">
+              <a href = "#" onclick="opinionBox1();">Shinta Mani Shack</a>
+              <p>
+                The hotel is simply spectacular.
+                The most welcoming welcome.
+                The staff goes out of their way to make the stay pleasant.
+                The beautiful rooms, very spacious and elegantly decorated.
+              </p>
+              <a href = "#" onclick="opinionBox2();">Ikos Olivia</a>
+              <p>
+                A great luxury hotel, impressive SPA with an amazing, professional and very friendly staff.
+                One of the best massages of my life !!
+                This hotel is excellent and the attention of absolutely all the staff is wonderful.
+                I definitely recommend this hotel.
+              </p>
+              <a href = "#" onclick="opinionBox3();">Excellence Playa Mujeres</a>
+              <p>
+                The facilities and everything are incredible.
+                We were the only Mexicans and they made us feel at home.
+                Diego the bartender of the prelude is the best! Congratulations to him.
+                They fixed everything we needed and we definitely came back.
+              </p>
+
             </div>
 
           </div>
 
-          <div class="pInfoDetail">
-            <h4 onclick="pInfoDetail()"><a href="#">Personal Information<a></h4>
-            <p>
-              Bill Gates is an American business magnate, investor, author, philanthropist, humanitarian,
-              and principal founder of Microsoft Corporation.
-            </p>
+          <div class="Preferences">
+            <h4><u>My Preferences</u></h4>
+            <div class="buttonAdd">
+              <button onclick="addKeyword()">+</button>
+            </div>
           </div>
 
-        </div>  <!--  End pInfo -->
 
-        <div class="opinion">
-          <h4 onclick="opinion()"><a href="#">Last opinions</a></h4>
-          <div class="opinionDetail">
-            <a href = "#" onclick="opinionBox1();">Shinta Mani Shack</a>
-            <p>
-              The hotel is simply spectacular.
-              The most welcoming welcome.
-              The staff goes out of their way to make the stay pleasant.
-              The beautiful rooms, very spacious and elegantly decorated.
-            </p>
-            <a href = "#" onclick="opinionBox2();">Ikos Olivia</a>
-            <p>
-              A great luxury hotel, impressive SPA with an amazing, professional and very friendly staff.
-              One of the best massages of my life !!
-              This hotel is excellent and the attention of absolutely all the staff is wonderful.
-              I definitely recommend this hotel.
-            </p>
-            <a href = "#" onclick="opinionBox3();">Excellence Playa Mujeres</a>
-            <p>
-              The facilities and everything are incredible.
-              We were the only Mexicans and they made us feel at home.
-              Diego the bartender of the prelude is the best! Congratulations to him.
-              They fixed everything we needed and we definitely came back.
-            </p>
 
+
+          <div id="keyword1">
+            <form><input class="prefeBox" id="k1" type="text"  value="Friends"></form>
+            <div class="buttonX">
+              <button onclick="deleteKeyword('keyword1','k1')">x</button>
+            </div>
+          </div>
+          <div id="keyword2">
+            <form><input class="prefeBox" id='k2' type="text"  value="Weekend"></form>
+            <div class="buttonX">
+              <button onclick="deleteKeyword('keyword2','k2')">x</button>
+            </div>
+          </div>
+          <div id="keyword3">
+            <form><input class="prefeBox" id='k3' type="text"  value="Volunteer"></form>
+            <div class="buttonX">
+              <button onclick="deleteKeyword('keyword3','k3')">x</button>
+            </div>
+          </div>
+          <div id="keyword4">
+            <form><input class="prefeBox"id='k4' type="text"  value=""></form>
+            <div class="buttonX">
+              <button onclick="deleteKeyword('keyword4','k4')">x</button>
+            </div>
+          </div>
+          <div id="keyword5">
+            <form><input class="prefeBox" id='k5' type="text" value=""></form>
+            <div class="buttonX">
+              <button onclick="deleteKeyword('keyword5','k5')">x</button>
+            </div>
+          </div>
+          <div id="keyword6">
+            <form><input class="prefeBox" id='k6' type="text"  value=""></form>
+            <div class="buttonX">
+              <button onclick="deleteKeyword('keyword6','k6')">x</button>
+            </div>
           </div>
 
-        </div>
-
-        <div class="Preferences">
-          <h4><u>My Preferences</u></h4>
-          <div class="buttonAdd">
-            <button onclick="addKeyword()">+</button>
-          </div>
-        </div>
-
-
-
-
-        <div id="keyword1">
-          <form><input class="prefeBox" id="k1" type="text"  value="Friends"></form>
-          <div class="buttonX">
-            <button onclick="deleteKeyword('keyword1','k1')">x</button>
-          </div>
-        </div>
-        <div id="keyword2">
-          <form><input class="prefeBox" id='k2' type="text"  value="Weekend"></form>
-          <div class="buttonX">
-            <button onclick="deleteKeyword('keyword2','k2')">x</button>
-          </div>
-        </div>
-        <div id="keyword3">
-          <form><input class="prefeBox" id='k3' type="text"  value="Volunteer"></form>
-          <div class="buttonX">
-            <button onclick="deleteKeyword('keyword3','k3')">x</button>
-          </div>
-        </div>
-        <div id="keyword4">
-          <form><input class="prefeBox"id='k4' type="text"  value=""></form>
-          <div class="buttonX">
-            <button onclick="deleteKeyword('keyword4','k4')">x</button>
-          </div>
-        </div>
-        <div id="keyword5">
-          <form><input class="prefeBox" id='k5' type="text" value=""></form>
-          <div class="buttonX">
-            <button onclick="deleteKeyword('keyword5','k5')">x</button>
-          </div>
-        </div>
-        <div id="keyword6">
-          <form><input class="prefeBox" id='k6' type="text"  value=""></form>
-          <div class="buttonX">
-            <button onclick="deleteKeyword('keyword6','k6')">x</button>
-          </div>
-        </div>
-
-
-
-
-
-
+        </div>  <!--End the leftContent-->
 
       </div>  <!--End the div leftBox-->
 
       <div class="rightBox">
 
-        <div id = "exerciseA">
-          <div class="pInfoBox">
+        <div id="rightContent">
 
-            <h2>Personal Information</h2>
-            <form><input class="normalBox" type="text" name="firstName" value="Name"></form>
-            <form><input class="normalBox" type="text" name="sureName" value="Surename"></form>
-            <form><input class="longBox" type="text" name="email" value="Email"></form>
-            <form><input class="normalBox" type="text" name="adress" value="Adress"></form>
-            <form><input class="normalBox" type="text" name="mobilePhone" value="Mobilephone"></form>
-            <form><input class="longBox" type="text" name="birthdate" value="Birthdate"></form>
+          <div id = "exerciseA">
+            <div class="pInfoBox">
 
-           <div class="activity">
-             <h2> My Activity in the App </h2>
-              <button class = "circleBox">7<br/><br/>Points</button>
-              <button class = "circleBox">2<br/><br/>Level</button>
-              <button class = "circleBox">3<br/><br/>Opinions</button>
-              <button class = "circleBox">5<br/><br/>Photos</button>
+              <h2>Personal Information</h2>
+              <form><input class="normalBox" type="text" name="firstName" value="Name"></form>
+              <form><input class="normalBox" type="text" name="sureName" value="Surename"></form>
+              <form><input class="longBox" type="text" name="email" value="Email"></form>
+              <form><input class="normalBox" type="text" name="adress" value="Adress"></form>
+              <form><input class="normalBox" type="text" name="mobilePhone" value="Mobilephone"></form>
+              <form><input class="longBox" type="text" name="birthdate" value="Birthdate"></form>
+
+             <div class="activity">
+               <h2> My Activity in the App </h2>
+                <button class = "circleBox">7<br/><br/>Points</button>
+                <button class = "circleBox">2<br/><br/>Level</button>
+                <button class = "circleBox">3<br/><br/>Opinions</button>
+                <button class = "circleBox">5<br/><br/>Photos</button>
+             </div>
            </div>
-         </div>
+          </div>
+
+
+
+        <div id = "exerciseB">
+          <h2>Last Opinions</h2>
+
+          <div class="rightBoxUp">
+            <div class="imageOpinion">
+              <img src="images/shinta.png" alt="" width="150" height="150">
+            </div>
+            <div class= "detailOpinion">
+              <h4><a href = "#" onclick="opinionBox1();">Shinta Mani Shack</a></h4>
+              <p>Oum Khun St, Krong Siem Reap 00000, Camboya</p>
+              <p>08 October 2016  - Daniel Gonzalez</p>
+            </div>
+            <div class="review">
+              <p>
+                The hotel is simply spectacular.
+                The most welcoming welcome.
+                The staff goes out of their way to make the stay pleasant.
+                The beautiful rooms, very spacious and elegantly decorated.
+              </p>
+            </div>
+          </div>
+
+          <div class="rightBoxDown">
+            <div class="imageOpinion">
+              <img src="images/IkosOlivia.png" alt="" width="150" height="150">
+            </div>
+            <div class= "detailOpinion">
+              <h4><a href = "#" onclick="opinionBox2();">Ikos Olivia</a></h4>
+              <p>Thesi Rahones, Gerakini, Halkidiki 631 00, Grecia</p>
+              <p>16 October 2015  - Raquel Diaz</p>
+            </div>
+            <div class="review">
+              <p>
+                A great luxury hotel, impressive SPA with an amazing, professional and very friendly staff.
+                One of the best massages of my life !!
+                This hotel is excellent and the attention of absolutely all the staff is wonderful.
+                I definitely recommend this hotel.
+              </p>
+            </div>
+          </div>
+
+          <div class="hiddenRightBoxDown">
+            <div class="imageOpinion">
+              <img src="images/ExcellencePlayaMujeres.png" alt="" width="150" height="150">
+            </div>
+            <div class= "detailOpinion">
+              <h4><a href = "#" onclick="opinionBox3();">Excellence Playa Mujeres</a></h4>
+              <p>Av. Bonampak, México</p>
+              <p>02 October 2014  - Tomas de la Rosa</p>
+            </div>
+            <div class="review">
+              <p>
+                The facilities and everything are incredible.
+                We were the only Mexicans and they made us feel at home.
+                Diego the bartender of the prelude is the best! Congratulations to him.
+                They fixed everything we needed and we definitely came back.
+              </p>
+            </div>
+          </div>
+
+          <div class="refresh">
+            <p>load more</p>
+            <a href = "">
+              <img src="images/refresh.png" alt="refresh icon" width="50" height="50">
+            </a>
+
+          </div>
+
         </div>
 
-
-
-      <div id = "exerciseB">
-        <h2>Last Opinions</h2>
-
-        <div class="rightBoxUp">
-          <div class="imageOpinion">
-            <img src="images/shinta.png" alt="" width="150" height="150">
-          </div>
-          <div class= "detailOpinion">
-            <h4><a href = "#" onclick="opinionBox1();">Shinta Mani Shack</a></h4>
-            <p>Oum Khun St, Krong Siem Reap 00000, Camboya</p>
-            <p>08 October 2016  - Daniel Gonzalez</p>
-          </div>
-          <div class="review">
-            <p>
-              The hotel is simply spectacular.
-              The most welcoming welcome.
-              The staff goes out of their way to make the stay pleasant.
-              The beautiful rooms, very spacious and elegantly decorated.
-            </p>
-          </div>
         </div>
-
-        <div class="rightBoxDown">
-          <div class="imageOpinion">
-            <img src="images/IkosOlivia.png" alt="" width="150" height="150">
-          </div>
-          <div class= "detailOpinion">
-            <h4><a href = "#" onclick="opinionBox2();">Ikos Olivia</a></h4>
-            <p>Thesi Rahones, Gerakini, Halkidiki 631 00, Grecia</p>
-            <p>16 October 2015  - Raquel Diaz</p>
-          </div>
-          <div class="review">
-            <p>
-              A great luxury hotel, impressive SPA with an amazing, professional and very friendly staff.
-              One of the best massages of my life !!
-              This hotel is excellent and the attention of absolutely all the staff is wonderful.
-              I definitely recommend this hotel.
-            </p>
-          </div>
-        </div>
-
-        <div class="hiddenRightBoxDown">
-          <div class="imageOpinion">
-            <img src="images/ExcellencePlayaMujeres.png" alt="" width="150" height="150">
-          </div>
-          <div class= "detailOpinion">
-            <h4><a href = "#" onclick="opinionBox3();">Excellence Playa Mujeres</a></h4>
-            <p>Av. Bonampak, México</p>
-            <p>02 October 2014  - Tomas de la Rosa</p>
-          </div>
-          <div class="review">
-            <p>
-              The facilities and everything are incredible.
-              We were the only Mexicans and they made us feel at home.
-              Diego the bartender of the prelude is the best! Congratulations to him.
-              They fixed everything we needed and we definitely came back.
-            </p>
-          </div>
-        </div>
-
-        <div class="refresh">
-          <p>load more</p>
-          <a href = "">
-            <img src="images/refresh.png" alt="refresh icon" width="50" height="50">
-          </a>
-
-        </div>
-
-      </div>
 
       </div>  <!--End the div rightBox-->
 
@@ -306,6 +321,31 @@
           Diego the bartender of the prelude is the best! Congratulations to him.
           They fixed everything we needed and we definitely came back.
         </p>
+
+      </div>
+
+
+      <div id="registerBox">
+
+        <!--
+          Problems
+          In html
+          1. How to use correcly form with input
+          2. Separate the lefside name and the rightside box
+        -->
+        <h2>Registration Form</h2>
+
+        <h4>Account Information</h4>
+        <form>
+          Username:
+          <input type="text" name="" value="">
+          <br/>
+          Password:
+          <input type="text" name="" value="">
+        </form>
+        <button>clear</button>
+        <button onclick="checkCookie();">save</button>
+      
 
       </div>
 
