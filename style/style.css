@@ -46,7 +46,7 @@ section{
 .leftBox{
   float: left;
   width:33.33%;
-  height: 1100px;
+  height: 1200px;
 }
 
 .pInfo{
@@ -199,7 +199,7 @@ section{
   background-color: #A7C4DE;
   float: right;
   width:66.66%;
-  height: 1100px;
+  height: 1200px;
 }
 
 .pInfoBox h2{
@@ -715,14 +715,14 @@ footer{
 
 
 /*  Block 2 Part 2*/
-/*
+
 .leftBox{
   display: none;
 }
 .rightBox{
   display: none;
 }
-*/
+
 #hiddenMenu{
   display: none;
 }
@@ -730,12 +730,16 @@ footer{
   color: #398DA7;
   height: auto;
   margin-bottom: 20px;
-  /**/display: none;
+  /*display: none;*/
 }
 #registerBox h4{
   clear: both;
 }
-#registerBox input[type=text]{
+#registerBox label{
+  margin-left: 10px;
+  display: inline-block;
+  width: 8%;
+}
+#registerBox input{
   width: 15%;
-  margin-left: 5em;
 }

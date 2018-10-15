@@ -327,25 +327,20 @@
 
       <div id="registerBox">
 
-        <!--
-          Problems
-          In html
-          1. How to use correcly form with input
-          2. Separate the lefside name and the rightside box
-        -->
+
         <h2>Registration Form</h2>
 
         <h4>Account Information</h4>
         <form>
-          Username:
-          <input type="text" name="" value="">
+          <label for="username">Username:</label>
+          <input type="text" name="username" value="" id="username">
           <br/>
-          Password:
-          <input type="text" name="" value="">
+          <label for="password"> Password:</label>
+          <input type="text" name="" value="" id="password">
         </form>
-        <button>clear</button>
-        <button onclick="checkCookie();">save</button>
-      
+        <button onclick="getCookie("username");">get cookie</button>
+        <button onclick="setCookie("username", user, 365);">set cookie</button>
+
 
       </div>
 

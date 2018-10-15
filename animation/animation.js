@@ -18,18 +18,18 @@ function addKeyword(){
 
   for(i=0; i<word.length&&!out; i++){
     if(document.getElementById(word[i]).value==""&& $(z[i]).css('display')=='block'){
-      out = true;
       alert("There is an unedited box!");
+      out = true;
     }
   }
 
   for(i=0; i<z.length&&!out; i++){
-    cont++;
     x = $(z[i]).css('display');
     if(x=='none'){
       document.getElementById(key[i]).style.display="block";
       out = true;
     }
+    cont++;
   }
   if(cont==6){
     alert("Maximum number of keywords!");
@@ -56,7 +56,7 @@ function opinionBox3(){
 };
 function cerrarPopup(n){
   document.getElementById(n).style.display="none";
-}
+};
 
 
 function logout(){
@@ -65,49 +65,36 @@ function logout(){
   $("#rightContent").hide();
   $("#hiddenMenu").show();
 
-}
+};
 
 function register(){
   $(".rightBox").hide();
   $(".leftBox").hide();
   $("#registerBox").show();
-}
+};
 
 
-/*  W3school copy and paste
-Problem -> can save the cookie file in the path
-function setCookie(cname,cvalue,exdays) {
-    var d = new Date();
-    d.setTime(d.getTime() + (exdays*24*60*60*1000));
-    var expires = "expires=" + d.toGMTString();
-    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-}
+
+function setCookie(cname, cvalue, exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  var expires = "expires="+ d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+};
+
 
 function getCookie(cname) {
-    var name = cname + "=";
-    var decodedCookie = decodeURIComponent(document.cookie);
-    var ca = decodedCookie.split(';');
-    for(var i = 0; i < ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0) == ' ') {
-            c = c.substring(1);
-        }
-        if (c.indexOf(name) == 0) {
-            return c.substring(name.length, c.length);
-        }
-    }
-    return "";
-}
-
-function checkCookie() {
-    var user=getCookie("username");
-    if (user != "") {
-        alert("Welcome again " + user);
-    } else {
-       user = prompt("Please enter your name:","");
-       if (user != "" && user != null) {
-           setCookie("username", user, 30);
-       }
-    }
-}
-*/
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i <ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+          c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+          return c.substring(name.length, c.length);
+      }
+  }
+  return "";
+};
