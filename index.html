@@ -114,43 +114,47 @@
 
 
 
+          <div id="keywords">
 
-          <div id="keyword1">
-            <form><input class="prefeBox" id="k1" type="text"  value="Friends"></form>
-            <div class="buttonX">
-              <button onclick="deleteKeyword('keyword1','k1')">x</button>
+            <div id="keyword1">
+              <form><input class="prefeBox" id="k1" type="text"  value="Friends"></form>
+              <div class="buttonX">
+                <button onclick="deleteKeyword('keyword1','k1')">x</button>
+              </div>
             </div>
-          </div>
-          <div id="keyword2">
-            <form><input class="prefeBox" id='k2' type="text"  value="Weekend"></form>
-            <div class="buttonX">
-              <button onclick="deleteKeyword('keyword2','k2')">x</button>
+            <div id="keyword2">
+              <form><input class="prefeBox" id='k2' type="text"  value="Weekend"></form>
+              <div class="buttonX">
+                <button onclick="deleteKeyword('keyword2','k2')">x</button>
+              </div>
             </div>
-          </div>
-          <div id="keyword3">
-            <form><input class="prefeBox" id='k3' type="text"  value="Volunteer"></form>
-            <div class="buttonX">
-              <button onclick="deleteKeyword('keyword3','k3')">x</button>
+            <div id="keyword3">
+              <form><input class="prefeBox" id='k3' type="text"  value="Volunteer"></form>
+              <div class="buttonX">
+                <button onclick="deleteKeyword('keyword3','k3')">x</button>
+              </div>
             </div>
-          </div>
-          <div id="keyword4">
-            <form><input class="prefeBox"id='k4' type="text"  value=""></form>
-            <div class="buttonX">
-              <button onclick="deleteKeyword('keyword4','k4')">x</button>
+            <div id="keyword4">
+              <form><input class="prefeBox"id='k4' type="text"  value=""></form>
+              <div class="buttonX">
+                <button onclick="deleteKeyword('keyword4','k4')">x</button>
+              </div>
             </div>
-          </div>
-          <div id="keyword5">
-            <form><input class="prefeBox" id='k5' type="text" value=""></form>
-            <div class="buttonX">
-              <button onclick="deleteKeyword('keyword5','k5')">x</button>
+            <div id="keyword5">
+              <form><input class="prefeBox" id='k5' type="text" value=""></form>
+              <div class="buttonX">
+                <button onclick="deleteKeyword('keyword5','k5')">x</button>
+              </div>
             </div>
-          </div>
-          <div id="keyword6">
-            <form><input class="prefeBox" id='k6' type="text"  value=""></form>
-            <div class="buttonX">
-              <button onclick="deleteKeyword('keyword6','k6')">x</button>
+            <div id="keyword6">
+              <form><input class="prefeBox" id='k6' type="text"  value=""></form>
+              <div class="buttonX">
+                <button onclick="deleteKeyword('keyword6','k6')">x</button>
+              </div>
             </div>
+
           </div>
+
 
         </div>  <!--End the leftContent-->
 
@@ -336,12 +340,36 @@
           <input type="text" name="username" value="" id="username">
           <br/>
           <label for="password"> Password:</label>
-          <input type="text" name="" value="" id="password">
+          <input type="password" name="" minlength="4" maxlength="8" required patern="[0-9a-z]+" value="" id="password">
+          <h4>Personal Information</h4>
+          <label for="firstname">First name:</label>
+          <input type="text" name="firstname" value="" id="firstname">
+          <br/>
+          <label for="lastname">Last name:</label>
+          <input type="text" name="lastname" value="" id="lastname">
+          <br/>
+          <label for="email">Email:</label>
+          <input type="email" name="email" value="" id="email">
+          <br/>
+          <label for="birthdate">Birthdate:</label>
+          <input type="date" name="birthdate" value="" id="birthdate">
+          <br/>
+          <label for="adress">Adress:</label>
+          <input type="text" name="adress" value="" id="adress">
+          <br/>
+          <label>Profile picture *:</label>
+          <input type ="file" name="profile" value="" id="profile">
+          <br/>
+          <p id="optionaltxt">Fields * is optional</p>
+          <div id="termOfConditions">
+            <input type ="checkbox" name="conditions" value="" id="conditions">
+            <label for conditions>I have read and accept the terms of use</label>
+          </div>
+          <br/>
+          <input type ="reset" name="" value="Reset" id="reset">
+          <input type ="submit" onclick="saveForm();" name="" value="Save" id="save">
+          <br/>
         </form>
-        <br/>
-        <button onclick="getCookie('username');">get cookie</button>
-        <button onclick="setCookie();">set cookie</button>
-
 
       </div>
 

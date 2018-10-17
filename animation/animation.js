@@ -72,13 +72,7 @@ function register(){
   $(".leftBox").hide();
   $("#registerBox").show();
 };
-/*   Test part */
-function setCookie() {
-  document.cookie="username=John Doe";
-};
 
-
-function getCookie(cname) {
-  var x = document.cookie;
-  alert(x);
+function saveForm(){
+  alert("Test");
 };

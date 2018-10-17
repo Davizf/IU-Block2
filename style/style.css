@@ -294,7 +294,7 @@ section{
 
 .refresh p{
   padding-top: 10%;
-  margin-left: 40%;
+  margin-left: 41%;
 }
 
 .refresh img {
@@ -406,22 +406,7 @@ footer{
     .refresh{
         display: none;
     }
-    #keyword1{
-      display: none;
-    }
-    #keyword2{
-      display: none;
-    }
-    #keyword3{
-      display: none;
-    }
-    #keyword4{
-      display: none;
-    }
-    #keyword5{
-      display: none;
-    }
-    #keyword6{
+    #keywords{
       display: none;
     }
     #popup1{
@@ -561,22 +546,7 @@ footer{
       color: #234C6C;
       display: block;
     }
-    #keyword1{
-      display: none;
-    }
-    #keyword2{
-      display: none;
-    }
-    #keyword3{
-      display: none;
-    }
-    #keyword4{
-      display: none;
-    }
-    #keyword5{
-      display: none;
-    }
-    #keyword6{
+    #keywords{
       display: none;
     }
     #popup1{
@@ -726,7 +696,6 @@ footer{
   display: none;
 }
 */
-
 #hiddenMenu{
   display: none;
 }
@@ -741,9 +710,18 @@ footer{
 }
 #registerBox label{
   margin-left: 10px;
+  margin-top: 3px;
   display: inline-block;
   width: 8%;
 }
-#registerBox input{
+#registerBox input[type="text"]{
   width: 15%;
+}
+
+#optionaltxt{
+  margin-left: 10px;
+  color: #819FF7;
+}
+#termOfConditions label{
+  width: auto;
 }
