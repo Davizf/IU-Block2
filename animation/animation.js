@@ -156,3 +156,37 @@ function pInfoForm(){
   var phone = document.getElementById("p-phone");
   document.cookie= adress.name + "=" + adress.value;
 };
+
+function checkVoid(){
+  var x;
+  x = document.getElementById("p-firstname");
+  if(x.value==""){
+    alert("Firstname field is empty");
+    x.value=getCookieByName("firstname");
+  }
+  x = document.getElementById("p-lastname");
+  if(x.value==""){
+    alert("Lastname field is empty");
+    x.value=getCookieByName("lastname");
+  }
+  x = document.getElementById("p-email");
+  if(x.value==""){
+    alert("Email field is empty");
+    x.value=getCookieByName("email");
+  }
+  x = document.getElementById("p-adress");
+  if(x.value==""){
+    alert("Adress field is empty");
+    x.value=getCookieByName("adress");
+  }
+  x = document.getElementById("p-phone");
+  if(x.value==""){
+    alert("Phone field is empty");
+    x.value=getCookieByName("phone");
+  }
+  x = document.getElementById("p-birthdate");
+  if(x.value==""){
+    alert("Birthdate field is empty");
+    x.value=getCookieByName("birthdate");
+  }
+};
