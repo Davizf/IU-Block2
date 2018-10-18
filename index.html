@@ -40,7 +40,7 @@
         <nav class="menu">
           <ul>
             <li><a href = "#" onclick="register();">Register</a></li>
-            <li><a href = "#">Login</a></li>
+            <li><a href = "#" onclick="login();">Login</a></li>
           </ul>
         </nav>
       </div>
@@ -57,18 +57,18 @@
 
             <div class = "user">
               <div class="pInfoPhoto">
-                <img src="images/BillGates.png" alt="" width="150" height="150">
+                <img id="userPhoto" src="images/BillGates.png" alt="" width="150" height="150">
               </div>
 
               <div class="username">
-                <p>Bill Gates</p>
+                <p id="user-name">Bill Gates</p>
               </div>
 
             </div>
 
             <div class="pInfoDetail">
               <h4 onclick="pInfoDetail()"><a href="#">Personal Information<a></h4>
-              <p>
+              <p id="pInfo-Detail">
                 Bill Gates is an American business magnate, investor, author, philanthropist, humanitarian,
                 and principal founder of Microsoft Corporation.
               </p>
@@ -167,13 +167,18 @@
           <div id = "exerciseA">
             <div class="pInfoBox">
 
-              <h2>Personal Information</h2>
-              <form><input class="normalBox" type="text" name="firstName" value="Name"></form>
-              <form><input class="normalBox" type="text" name="sureName" value="Surename"></form>
-              <form><input class="longBox" type="text" name="email" value="Email"></form>
-              <form><input class="normalBox" type="text" name="adress" value="Adress"></form>
-              <form><input class="normalBox" type="text" name="mobilePhone" value="Mobilephone"></form>
-              <form><input class="longBox" type="text" name="birthdate" value="Birthdate"></form>
+
+              <form onsubmit="pInfoForm(); return false">
+                <h2>Personal Information</h2>
+                <input class="normalBox" type="text" name="firstname" value="Name" id="p-firstname" required>
+                <input class="normalBox" type="text" name="lastname" value="Lastname" id="p-lastname" required>
+                <input class="longBox" type="email" name="email" value="Email" id="p-email" required>
+                <input class="normalBox" type="text" name="adress" value="Adress" id="p-adress" required>
+                <input class="normalBox" type="text" name="phone" value="Mobilephone" id="p-phone" required>
+                <input class="longBox" type="birthdate" name="birthdate" value="Birthdate" id="p-birthdate" required>
+                <br/>
+                <input type ="submit" name="" value="Save" id="saveInfoBox">
+              </form>
 
              <div class="activity">
                <h2> My Activity in the App </h2>
@@ -334,43 +339,60 @@
 
         <h2>Registration Form</h2>
 
-        <h4>Account Information</h4>
-        <form>
+        <form onsubmit="registerForm(); return false">
+          <h4>Account Information</h4>
           <label for="username">Username:</label>
-          <input type="text" name="username" value="" id="username">
+          <input type="text" name="username" value="" id="username" required>
           <br/>
           <label for="password"> Password:</label>
-          <input type="password" name="" minlength="4" maxlength="8" required patern="[0-9a-z]+" value="" id="password">
+          <input type="password" name="password" minlength="4" maxlength="8" pattern="[0-9a-z]+" value="" id="password" required>
           <h4>Personal Information</h4>
           <label for="firstname">First name:</label>
-          <input type="text" name="firstname" value="" id="firstname">
+          <input type="text" name="firstname" value="" id="firstname" required>
           <br/>
           <label for="lastname">Last name:</label>
-          <input type="text" name="lastname" value="" id="lastname">
+          <input type="text" name="lastname" value="" id="lastname" required>
           <br/>
           <label for="email">Email:</label>
-          <input type="email" name="email" value="" id="email">
+          <input type="email" name="email" value="" id="email" required>
           <br/>
           <label for="birthdate">Birthdate:</label>
-          <input type="date" name="birthdate" value="" id="birthdate">
+          <input type="date" name="birthdate" value="" id="birthdate" required>
           <br/>
           <label for="adress">Adress:</label>
-          <input type="text" name="adress" value="" id="adress">
+          <input type="text" name="adress" value="" id="adress" required>
           <br/>
           <label>Profile picture *:</label>
           <input type ="file" name="profile" value="" id="profile">
           <br/>
           <p id="optionaltxt">Fields * is optional</p>
           <div id="termOfConditions">
-            <input type ="checkbox" name="conditions" value="" id="conditions">
+            <input type ="checkbox" name="conditions" value="" id="conditions" required>
             <label for conditions>I have read and accept the terms of use</label>
           </div>
           <br/>
           <input type ="reset" name="" value="Reset" id="reset">
-          <input type ="submit" onclick="saveForm();" name="" value="Save" id="save">
+          <input type ="submit" name="" value="Save" id="save">
           <br/>
         </form>
 
+      </div>
+
+
+      <div id="loginBox">
+        <form onsubmit="loginForm(); return false">
+          <h4>Account Information</h4>
+          <label for="emailLogin">Email:</label>
+          <input type="email" name="emailLogin" value="" id="emailLogin" required>
+          <br/>
+          <label for="passwordLogin"> Password:</label>
+          <input type="password" name="passwordLogin" minlength="4" maxlength="8" pattern="[0-9a-z]+" value="" id="passwordLogin" required>
+          <br/>
+          <br/>
+          <input type ="reset" name="" value="Reset" id="reset">
+          <input type ="submit" name="" value="Save" id="save">
+          <br/>
+        </form>
       </div>
 
     </section>

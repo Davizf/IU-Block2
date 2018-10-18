@@ -684,18 +684,6 @@ footer{
   color: #234C6C;
 }
 
-
-
-/*  Block 2 Part 2*/
-/*
-.leftBox{
-  display: none;
-}
-
-.rightBox{
-  display: none;
-}
-*/
 #hiddenMenu{
   display: none;
 }
@@ -703,7 +691,7 @@ footer{
   color: #398DA7;
   height: auto;
   margin-bottom: 20px;
-  /**/display: none;
+  display: none;
 }
 #registerBox h4{
   clear: both;
@@ -714,8 +702,19 @@ footer{
   display: inline-block;
   width: 8%;
 }
-#registerBox input[type="text"]{
+#registerBox input{
   width: 15%;
+}
+
+#registerBox input[type="checkbox"]{
+  width: auto;
+}
+
+#registerBox input[type="submit"]{
+  width: auto;
+}
+#registerBox input[type="reset"]{
+  width: auto;
 }
 
 #optionaltxt{
@@ -724,4 +723,34 @@ footer{
 }
 #termOfConditions label{
   width: auto;
+}
+#loginBox{
+  color: #398DA7;
+  margin-bottom: 20px;
+  display: none;
+}
+
+#loginBox h4{
+  clear: both;
+}
+#loginBox label{
+  margin-left: 10px;
+  margin-top: 3px;
+  display: inline-block;
+  width: 8%;
+}
+#registerBox input{
+  width: 15%;
+}
+
+#registerBox input[type="submit"]{
+  width: auto;
+}
+#registerBox input[type="reset"]{
+  width: auto;
+}
+#saveInfoBox{
+  color: #4b7375;
+  background-color: #ccc;
+  margin: 30px;
 }

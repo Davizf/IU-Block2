@@ -73,6 +73,86 @@ function register(){
   $("#registerBox").show();
 };
 
-function saveForm(){
-  alert("Test");
+function registerForm(){
+  var email = document.getElementById("email");
+
+  if(email.value == getCookieByName("email")){
+    alert("An account associated with email already exists");
+  }else{
+    document.cookie= email.name + "=" + email.value;
+    var username = document.getElementById("username");
+    document.cookie= username.name + "=" + username.value;
+    var password = document.getElementById("password");
+    document.cookie= password.name + "=" + password.value;
+    var firstname = document.getElementById("firstname");
+    document.cookie= firstname.name + "=" + firstname.value;
+    var lastname = document.getElementById("lastname");
+    document.cookie= lastname.name + "=" + lastname.value;
+    var birthdate = document.getElementById("birthdate");
+    document.cookie= birthdate.name + "=" + birthdate.value;
+    var adress = document.getElementById("adress");
+    document.cookie= adress.name + "=" + adress.value;
+  }
+};
+
+function getCookieByName(name) {
+  var v = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+  return v ? v[2] : null;
+};
+
+function login(){
+  $("#menuBlock1").hide();
+  $("#hiddenMenu").hide();
+  $("#registerBox").hide();
+  $(".rightBox").hide();
+  $(".leftBox").hide();
+  $("#loginBox").show();
+};
+
+function loginForm(){
+  var emailLogin = document.getElementById("emailLogin");
+  var passwordLogin = document.getElementById("passwordLogin");
+  if(emailLogin.value != getCookieByName("email")){
+    alert("The specified email is not registered");
+  }else{
+    if(passwordLogin.value != getCookieByName("password")){
+      alert("Wrong password!");
+    }else{
+      alert("Loging in...");
+      $("#loginBox").hide();
+      $(".rightBox").show();
+      $(".leftBox").show();
+      $("#leftContent").show();
+      $("#rightContent").show();
+      $("#menuBlock1").show();
+
+      document.getElementById("user-name").innerHTML = getCookieByName("username");
+      document.getElementById("pInfo-Detail").innerHTML = "New user";
+
+      document.getElementById("p-firstname").value = getCookieByName("firstname");
+      document.getElementById("p-lastname").value = getCookieByName("lastname");
+      document.getElementById("p-email").value = getCookieByName("email");
+      document.getElementById("p-adress").value = getCookieByName("adress");
+      document.getElementById("p-phone").value = "";
+      document.getElementById("p-birthdate").value = getCookieByName("birthdate");
+
+      document.getElementById("userPhoto").src = "images/newUserIcon.png";
+    }
+  }
+};
+
+function pInfoForm(){
+
+  var firstname = document.getElementById("p-firstname");
+  document.cookie= firstname.name + "=" + firstname.value;
+  var lastname = document.getElementById("p-lastname");
+  document.cookie= lastname.name + "=" + lastname.value;
+  var email = document.getElementById("p-email");
+  document.cookie= email.name + "=" + email.value;
+  var birthdate = document.getElementById("p-birthdate");
+  document.cookie= birthdate.name + "=" + birthdate.value;
+  var adress = document.getElementById("p-adress");
+  document.cookie= adress.name + "=" + adress.value;
+  var phone = document.getElementById("p-phone");
+  document.cookie= adress.name + "=" + adress.value;
 };
