@@ -61,9 +61,11 @@ function cerrarPopup(n){
 
 function logout(){
   $("#menuBlock1").hide();
-  $("#leftContent").hide();
-  $("#rightContent").hide();
+  $(".leftBox").hide();
+  $(".rightBox").hide();
   $("#hiddenMenu").show();
+  $("#searchBar").show();
+  $("#gallery").show();
 
 };
 
@@ -71,6 +73,8 @@ function register(){
   $(".rightBox").hide();
   $(".leftBox").hide();
   $("#registerBox").show();
+  $("#searchBar").hide();
+  $("#gallery").hide();
 };
 
 function registerForm(){
@@ -107,6 +111,8 @@ function login(){
   $(".rightBox").hide();
   $(".leftBox").hide();
   $("#loginBox").show();
+  $("#searchBar").hide();
+  $("#gallery").hide();
 };
 
 function loginForm(){
@@ -154,7 +160,7 @@ function pInfoForm(){
   var adress = document.getElementById("p-adress");
   document.cookie= adress.name + "=" + adress.value;
   var phone = document.getElementById("p-phone");
-  document.cookie= adress.name + "=" + adress.value;
+  document.cookie= phone.name + "=" + phone.value;
 };
 
 function checkVoid(){
@@ -190,3 +196,141 @@ function checkVoid(){
     x.value=getCookieByName("birthdate");
   }
 };
+
+
+/*   Gallery  */
+
+/*
+Para la implementacion de la galeria rotaria hemos utilizado el plugin "EasySlides"  
+*/
+$(document).ready(function() {
+  $('.slider_circle').EasySlides({'autoplay': true, 'show': 5})
+});
+
+(function ($) {
+
+  $.fn.EasySlides = function (options) {
+    var settings = $.extend({
+      'autoplay': false,
+      'timeout': 3000,
+      'show': 5,
+      'delayaftershow': 300,
+      'loop': true,
+      'startslide': 0,
+      'beforeshow': function () {},
+      'aftershow': function () {},
+    }, options);
+    return this.each(function () {
+      var this_slider = this;
+      var EasySlidesTimer;
+      var EasySlidesCanChange = true;
+
+      var count = $(this_slider).children('*:not(.next_button, .prev_button, .nav_indicators)').length;
+      var cur_slide = 0;
+      var mousedowned = false;
+      var need_slide = 0;
+      var slides;
+      if (count > 0) {
+
+        while (count < settings['show']) {
+          var html = $(this_slider).html();
+          $(html).appendTo(this_slider);
+          $(this_slider).children('.next_button:eq(0), .prev_button:eq(0), .nav_indicators:eq(0)').remove();
+          slides = $(this_slider).children('*:not(.next_button, .prev_button, .nav_indicators)');
+
+          count = $(slides).length;
+        }
+        slides = $(this_slider).children('*:not(.next_button, .prev_button, .nav_indicators)');
+
+
+        var EasySlidesNext = function (nextslide) {
+        if (EasySlidesCanChange) {
+          EasySlidesCanChange = false;
+          setTimeout(function () {
+            EasySlidesCanChange = true;
+          }, settings['delayaftershow']);
+          clearTimeout(EasySlidesTimer);
+          if (typeof settings['beforeshow'] == 'function') {
+            settings['beforeshow']();
+          }
+          var i = 0;
+          if (count > 0) {
+            if (typeof nextslide == 'number') {
+                cur_slide = nextslide;
+                } else {
+                  cur_slide++;
+                  nextslide = cur_slide;
+                }
+
+                $(this_slider).children('.nav_indicators').find('ul').find('li').removeClass('active');
+                $(this_slider).find('.nav_indicators ul li:nth-child(' + (nextslide + 1) + ')').addClass('active');
+                i = 0;
+                $(slides).each(function () {
+                var cssclass = '';
+                var icount = 0;
+                icount = i - nextslide;
+                while (icount < 0) {
+                  icount = icount + count;
+                }
+                if (icount == 0) {
+                  cssclass = 'active';
+                  $(this_slider).find('.' + cssclass + ':not(.nav_indicators ul li)').removeClass(cssclass);
+                  $(this).removeClass('hidden');
+                  $(this).addClass(cssclass);
+                } else if (icount < settings['show'] / 2) {
+                  cssclass = 'next' + icount;
+                  $(this_slider).find('.' + cssclass).removeClass(cssclass);
+                  $(this).removeClass('hidden');
+                  $(this).addClass(cssclass);
+                } else if (icount > count - (settings['show'] / 2)) {
+                  cssclass = 'prev' + (count - icount);
+                  $(this_slider).find('.' + cssclass).removeClass(cssclass);
+                  $(this).removeClass('hidden');
+                  $(this).addClass(cssclass);
+                } else {
+                  $(this).addClass('hidden');
+                }
+                if ((Math.abs(i - nextslide) > (settings['show'] / 2)) && (settings['loop'] == false)) {
+                  var icnt = 1;
+                  while (icnt < settings['show'] / 2) {
+                    cssclass = 'next' + icnt;
+                    if ($(this).hasClass(cssclass) ) {
+                      $(this).removeClass(cssclass)
+                    };
+                    cssclass = 'prev' + icnt;
+                    if ($(this).hasClass(cssclass) ) {
+                      $(this).removeClass(cssclass)
+                    };
+                    icnt ++;
+                    };
+                    $(this).addClass('hidden');
+                    }
+                    i++;
+                    });
+                    if (settings['autoplay']) {
+                      clearTimeout(EasySlidesTimer);
+                      EasySlidesTimer = setTimeout(function () {
+                      EasySlidesNext();
+                    }, settings['timeout']);
+                  }
+                }
+
+              }
+          }
+        EasySlidesNext(settings['startslide']);
+
+
+        $(this_slider).find('.next_button').click(function () {
+          EasySlidesCanChange = true;
+          EasySlidesNext();
+        });
+        $(this_slider).find('.prev_button').click(function () {
+          EasySlidesCanChange = true;
+          cur_slide--;
+          EasySlidesNext(cur_slide);
+        });
+
+      }
+    });
+  }
+})(jQuery);

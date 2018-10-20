@@ -1,0 +1,1 @@
+Para el correcto funcionamiento de cookies es necesario utilizar el navegator Fire Fox en lugar de Chrome.
