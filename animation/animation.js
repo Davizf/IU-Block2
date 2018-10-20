@@ -83,6 +83,7 @@ function registerForm(){
   if(email.value == getCookieByName("email")){
     alert("An account associated with email already exists");
   }else{
+    alert("Account created");
     document.cookie= email.name + "=" + email.value;
     var username = document.getElementById("username");
     document.cookie= username.name + "=" + username.value;
@@ -201,7 +202,7 @@ function checkVoid(){
 /*   Gallery  */
 
 /*
-Para la implementacion de la galeria rotaria hemos utilizado el plugin "EasySlides"  
+Para la implementacion de la galeria rotaria hemos utilizado el plugin "EasySlides"
 */
 $(document).ready(function() {
   $('.slider_circle').EasySlides({'autoplay': true, 'show': 5})
