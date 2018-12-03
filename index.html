@@ -1,485 +1,680 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <title>Travel Opinion</title>
-    <link rel="stylesheet" type="text/css" href="style/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DISCOVER</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="animation/animation.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="animation.js"></script>
+    <script type="text/javascript" src="sslide.js"></script>
+    <script type="text/javascript">
+    		$(document).ready(function(){
+
+    			//设置config, 必需的参数为lbId, 其他参数可选, ./js/sslide.js文件最前面有config参数详细说明.
+    			//如果没有传入图片路径数组，会默认读取./css/images目录下的slb1.png 到 slb5.png 的5张图片,
+    			//最简单的添加轮播的方式是直接覆盖这几张图片。
+
+    			var info1 = {
+    				"lbId": "myslide_1",
+    				"picWidth": 470,
+    				"picHeight": 650,
+    				//"interTime": 2500,
+    				//"switchBtnShow": false,
+    				//"switchDotShow": false
+    				//"autoSlide": false,
+    				//"pause": false,
+    				//"loop": false,
+    				//"picNum": 5,
+    				"picPath": ["images/slb1.png","images/slb2.png","images/slb3.png","images/slb4.png"]
+    			};
+
+
+
+    			SSlide(info1);
+
+    		});
+    	</script>
   </head>
-
   <body>
-    <header>
-      <!--Logo-->
-      <div class="logo">
-        <img src="images/icon.png" alt="icon" width="50" height="50">
+
+    <div id ="main">
+      <div id="logo">
+        <img src = "images/whiteLogo.png" width="70px" height="60px">
       </div>
-      <!--Logo name-->
-      <div class="logoName">
-        <b>Travel Opinion</b>
+      <div id="logoname">
+        <h2>DISCOVER</h2>
       </div>
 
-      <!--Menu-->
-      <div id="menuBlock1">
+
+      <div id="menuMain">
+        <img src = "images/register.png" onclick="registerPage()" id="registerICON">
+        <img src = "images/natalieDormerBlue.jpg" width="70px" height="70px"  id="userICONBLUE">
         <nav class="menu">
           <ul>
-            <li><a href = "#">Restaurant</a></li>
-            <li><a href = "#">Hotel</a></li>
-            <li><a href = "#">Contact</a></li>
-            <li><a href = "#" onclick="logout();">Logout</a></li>
+            <li onclick="hoteles()"><a href = "#">Hoteles</a></li>
+            <li onclick="experiences()"><a href = "#">Experiencias</a></li>
+            <li onclick="help()"><a href = "#">Ayuda</a></li>
+            <li onclick="loginPage()" id="changeLog1"><a href = "#">Iniciar Seccion</a></li>
+            <li onclick="profile()" id="changePro1"><a href = "#">Perfil</a></li>
           </ul>
         </nav>
       </div>
 
 
-      <div id="hiddenMenu">
-        <nav class="menu">
-          <ul>
-            <li><a href = "#" onclick="register();">Register</a></li>
-            <li><a href = "#" onclick="login();">Login</a></li>
-          </ul>
-        </nav>
+      <div id="softwareStore">
+        <img src = "images/googlePlay.jpg" width="120px" height="40px">
+        <img src = "images/appleStore.jpg" width="120px" height="40px">
       </div>
 
-    </header>
-
-    <section>
-      <!--The left container-->
-      <div class="leftBox">
-
-        <div id="leftContent">
-
-          <div class="pInfo">
-
-            <div class = "user">
-              <div class="pInfoPhoto">
-                <img id="userPhoto" src="images/BillGates.png" alt="" width="150" height="150">
-              </div>
-
-              <div class="username">
-                <p id="user-name">Bill Gates</p>
-              </div>
-
+      <div id = "searchBox">
+        <h2>Busca hoteles y experiencias fantasticas</h2>
+        <div id = "sBox">
+          <form onsubmit="searchForm(); return false">
+            <label>Lugar</label>
+            <div id="div1">
+              <input type="text" value="" id="lugar"required>
             </div>
 
-            <div class="pInfoDetail">
-              <h4 onclick="pInfoDetail()"><a href="#">Personal Information</a></h4>
-              <p id="pInfo-Detail">
-                Bill Gates is an American business magnate, investor, author, philanthropist, humanitarian,
-                and principal founder of Microsoft Corporation.
-              </p>
+            <div class="left">
+              <label>Fecha de partida</label>
+            </div>
+            <div class="right">
+              <label>Fecha de llegada</label>
+            </div>
+            <div class="left">
+              <input type="text" value="" id = "partida" required>
+            </div>
+            <div class="right">
+              <input type="text" value="" id="llegada" required>
             </div>
 
-          </div>  <!--  End pInfo -->
-
-          <div class="opinion">
-            <h4 onclick="opinion()"><a href="#">Last opinions</a></h4>
-            <div class="opinionDetail">
-              <a href = "#" onclick="opinionBox1();">Shinta Mani Shack</a>
-              <p>
-                The hotel is simply spectacular.
-                The most welcoming welcome.
-                The staff goes out of their way to make the stay pleasant.
-                The beautiful rooms, very spacious and elegantly decorated.
-              </p>
-              <a href = "#" onclick="opinionBox2();">Ikos Olivia</a>
-              <p>
-                A great luxury hotel, impressive SPA with an amazing, professional and very friendly staff.
-                One of the best massages of my life !!
-                This hotel is excellent and the attention of absolutely all the staff is wonderful.
-                I definitely recommend this hotel.
-              </p>
-              <a href = "#" onclick="opinionBox3();">Excellence Playa Mujeres</a>
-              <p>
-                The facilities and everything are incredible.
-                We were the only Mexicans and they made us feel at home.
-                Diego the bartender of the prelude is the best! Congratulations to him.
-                They fixed everything we needed and we definitely came back.
-              </p>
-
+            <div class="left">
+              <label>Numero de habitaciones</label>
+            </div>
+            <div class="right">
+              <label>Numero de huespedes</label>
+            </div>
+            <div class="left">
+              <input type="text" value="" required>
+            </div>
+            <div class="right">
+              <input type="text" value="" id="personas" required>
             </div>
 
-          </div>  <!--  End opinion -->
-
-          <div class="Preferences">
-            <h4><u>My Preferences</u></h4>
-            <div class="buttonAdd">
-              <button onclick="addKeyword()">+</button>
-            </div>
-          </div>
-
-          <div id="keywords">
-
-            <div id="keyword1">
-              <form><input class="prefeBox" id="k1" type="text"  value="Friends"></form>
-              <div class="buttonX">
-                <button onclick="deleteKeyword('keyword1','k1')">x</button>
-              </div>
-            </div>
-            <div id="keyword2">
-              <form><input class="prefeBox" id='k2' type="text"  value="Weekend"></form>
-              <div class="buttonX">
-                <button onclick="deleteKeyword('keyword2','k2')">x</button>
-              </div>
-            </div>
-            <div id="keyword3">
-              <form><input class="prefeBox" id='k3' type="text"  value="Volunteer"></form>
-              <div class="buttonX">
-                <button onclick="deleteKeyword('keyword3','k3')">x</button>
-              </div>
-            </div>
-            <div id="keyword4">
-              <form><input class="prefeBox" id='k4' type="text"  value=""></form>
-              <div class="buttonX">
-                <button onclick="deleteKeyword('keyword4','k4')">x</button>
-              </div>
-            </div>
-            <div id="keyword5">
-              <form><input class="prefeBox" id='k5' type="text" value=""></form>
-              <div class="buttonX">
-                <button onclick="deleteKeyword('keyword5','k5')">x</button>
-              </div>
-            </div>
-            <div id="keyword6">
-              <form><input class="prefeBox" id='k6' type="text"  value=""></form>
-              <div class="buttonX">
-                <button onclick="deleteKeyword('keyword6','k6')">x</button>
-              </div>
+            <div id="div4">
+              <label>Palabras clave</label>
+              <br/>
+              <input type="text" value="" required>
             </div>
 
-          </div>  <!--  End keywords -->
 
-
-        </div>  <!--End the leftContent-->
-
-      </div>  <!--End the div leftBox-->
-
-      <div class="rightBox">
-
-        <div id="rightContent">
-
-          <div id = "exerciseA">
-            <div class="pInfoBox">
-
-
-              <form onsubmit="pInfoForm(); return false">
-                <h2>Personal Information</h2>
-                <input class="normalBox" type="text" name="firstname" placeholder="Name" value="Name" id="p-firstname" required>
-                <input class="normalBox" type="text" name="lastname" placeholder="Lastname" value="Lastname" id="p-lastname" required>
-                <input class="longBox" type="email" name="email" placeholder="Email"  value="Email" id="p-email" required>
-                <input class="normalBox" type="text" name="adress" placeholder="Adress"  value="Adress" id="p-adress" required>
-                <input class="normalBox" type="text" name="phone" placeholder="Phone number" value="Mobilephone" id="p-phone" required>
-                <input class="longBox" type="date" name="birthdate"  id="p-birthdate" required>
-                <br/>
-                <input type ="submit" name="submit" value="Save" id="saveInfoBox" onclick="checkVoid();">
-              </form>
-
-             <div class="activity">
-               <h2> My Activity in the App </h2>
-                <button class = "circleBox">7<br/><br/>Points</button>
-                <button class = "circleBox">2<br/><br/>Level</button>
-                <button class = "circleBox">3<br/><br/>Opinions</button>
-                <button class = "circleBox">5<br/><br/>Photos</button>
-             </div>
-           </div>
-         </div>  <!--  End exerciseA -->
-
-
-
-        <div id = "exerciseB">
-          <h2>Last Opinions</h2>
-
-          <div class="rightBoxUp">
-            <div class="imageOpinion">
-              <img src="images/shinta.png" alt="" width="150" height="150">
+            <div id="Submit">
+                <input type ="submit" value="Buscar">
             </div>
-            <div class= "detailOpinion">
-              <h4><a href = "#" onclick="opinionBox1();">Shinta Mani Shack</a></h4>
-              <p>Oum Khun St, Krong Siem Reap 00000, Camboya</p>
-              <p>08 October 2016  - Daniel Gonzalez</p>
-            </div>
-            <div class="review">
-              <p>
-                The hotel is simply spectacular.
-                The most welcoming welcome.
-                The staff goes out of their way to make the stay pleasant.
-                The beautiful rooms, very spacious and elegantly decorated.
-              </p>
-            </div>
-          </div>  <!--  End exerciseB -->
-
-          <div class="rightBoxDown">
-            <div class="imageOpinion">
-              <img src="images/IkosOlivia.png" alt="" width="150" height="150">
-            </div>
-            <div class= "detailOpinion">
-              <h4><a href = "#" onclick="opinionBox2();">Ikos Olivia</a></h4>
-              <p>Thesi Rahones, Gerakini, Halkidiki 631 00, Grecia</p>
-              <p>16 October 2015  - Raquel Diaz</p>
-            </div>
-            <div class="review">
-              <p>
-                A great luxury hotel, impressive SPA with an amazing, professional and very friendly staff.
-                One of the best massages of my life !!
-                This hotel is excellent and the attention of absolutely all the staff is wonderful.
-                I definitely recommend this hotel.
-              </p>
-            </div>
-          </div>
-
-          <div class="hiddenRightBoxDown">
-            <div class="imageOpinion">
-              <img src="images/ExcellencePlayaMujeres.png" alt="" width="150" height="150">
-            </div>
-            <div class= "detailOpinion">
-              <h4><a href = "#" onclick="opinionBox3();">Excellence Playa Mujeres</a></h4>
-              <p>Av. Bonampak, México</p>
-              <p>02 October 2014  - Tomas de la Rosa</p>
-            </div>
-            <div class="review">
-              <p>
-                The facilities and everything are incredible.
-                We were the only Mexicans and they made us feel at home.
-                Diego the bartender of the prelude is the best! Congratulations to him.
-                They fixed everything we needed and we definitely came back.
-              </p>
-            </div>
-          </div>  <!--  End hiddenRightBoxDown -->
-
-          <div class="refresh">
-            <p>load more</p>
-            <a href = "">
-              <img src="images/refresh.png" alt="refresh icon" width="50" height="50">
-            </a>
-
-          </div>  <!--  End refresh -->
+          </form>
 
         </div>
+      </div>
+
+      <div id = "politicaCookies">
+        <p>Nuestra web usa cookies con fines tecnicos, analiticos y de marketing. Si estas de acuerdo, continua con tu busqueda</p>
+        <img onclick="acceptCookies()" src = "images/Acepto.jpg" width="150px" height="50px" >
+      </div>
+
+
+    </div>  <!-- end main-->
+
+
+    <!--- End main  ------------------------------------------------------------------------------------------------------------------->
+
+
+    <div id ="subMain">
+
+      <div id ="submainBar">
+        <div onclick="backMain()" id="logoBlue">
+          <img src = "images/blueLogo.png"  width="70px" height="70px">
 
         </div>
+        <div id="logonameBlue">
+          <h2 onclick="backMain()"><a href = "#">DISCOVER</h2>
+        </div>
 
-      </div>  <!--End the div rightBox-->
 
-      <!-- popup  -->
-      <div id ="popup1">
-        <button class="cerrar" onclick="cerrarPopup('popup1');">x</button>
-        <img src="images/shinta.png" alt="" width="200" height="200">
-        <h4>Shinta Mani Shack</h4>
-        <p>
-          Oum Khun St, Krong Siem Reap 00000, Camboya<br/>
-          Set in the French Quarter of Siem Reap.<br/>
-          +855-63-964-123<br/>
-          Hotel - First Class<br/>
-          Facebook: @ShintaManiAngkor
-        </p>
-        <a href ="https://www.shintamani.com/">https://www.shintamani.com/</a>
-        <p class="op">
-          08 October 2016  - Daniel Gonzalez<br/>
-          The hotel is simply spectacular.
-          The most welcoming welcome.
-          The staff goes out of their way to make the stay pleasant.
-          The beautiful rooms, very spacious and elegantly decorated.
-        </p>
-
+        <div id="menuMainBlue">
+          <img src = "images/registrarseWhite.png" onclick="registerPage()" id="registerICONWHITE">
+           <img src = "images/natalieDormer.jpg" width="70px" height="70px" id="userICONWHITE">
+          <nav class="menuBlue">
+            <ul>
+              <li onclick="hoteles()"><a href = "#">Hoteles</a></li>
+              <li onclick="experiences()"><a href = "#">Experiencias</a></li>
+              <li onclick="help()"><a href = "#">Ayuda</a></li>
+              <li onclick="loginPage()" id="changeLog2"><a href = "#">Iniciar Seccion</a></li>
+              <li onclick="profile()" id="changePro2"><a href = "#">Perfil</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
 
-      <div id ="popup2">
-        <button class="cerrar" onclick="cerrarPopup('popup2');">x</button>
-        <img src="images/IkosOlivia.png" alt="" width="200" height="200">
-        <h4>Ikos Olivia</h4>
-        <p>
-          Thesi Rahones, Gerakini, Halkidiki 631 00, Grecia<br/>
-          Amplias habitaciones, suites y bungalows con vistas panorámicas al mar.<br/>
-          +30 23730 95100<br/>
-          Hotel - Economy Class<br/>
-          Facebook: @ikosresorts
-        </p>
-        <a href ="http://ikosresorts.com/es/rooms/olivia/">http://ikosresorts.com/es/rooms/olivia/</a>
-        <p class="op">
-          16 October 2015  - Raquel Diaz<br/>
-          A great luxury hotel, impressive SPA with an amazing, professional and very friendly staff.
-          One of the best massages of my life !!
-          This hotel is excellent and the attention of absolutely all the staff is wonderful.
-          I definitely recommend this hotel.
-        </p>
-
-      </div>
-
-      <div id ="popup3">
-        <button class="cerrar" onclick="cerrarPopup('popup3');">x</button>
-        <img src="images/ExcellencePlayaMujeres.png" alt="" width="200" height="200">
-        <h4>Excellence Playa Mujeres</h4>
-        <p>
-          Av. Bonampak, México<br/>
-          The luxury oasis of Cancun.<br/>
-          +0800 051 6244<br/>
-          Hotel - First Class<br/>
-          Facebook: @ExcellenceGroupLuxuryHotelsAndResorts
-        </p>
-        <a href ="https://www.excellenceresorts.com/resorts/excellence-playa-mujeres/">https://www.excellenceresorts.com/resorts/excellence-playa-mujeres/</a>
-        <p class="op">
-          02 October 2014  - Tomas de la Rosa<br/>
-          The facilities and everything are incredible.
-          We were the only Mexicans and they made us feel at home.
-          Diego the bartender of the prelude is the best! Congratulations to him.
-          They fixed everything we needed and we definitely came back.
-        </p>
-
-      </div>
-
-
-      <div id="registerBox">
-
-
-        <h2>Registration Form</h2>
-
-        <form onsubmit="registerForm(); return false">
-          <h4>Account Information</h4>
-          <label for="username">Username:</label>
-          <input type="text" name="username" value="" id="username" required>
-          <br/>
-          <label for="password"> Password:</label>
-          <input type="password" name="password" minlength="4" maxlength="8" pattern="[0-9a-z]+" value="" id="password" required>
-          <h4>Personal Information</h4>
-          <label for="firstname">First name:</label>
-          <input type="text" name="firstname" value="" id="firstname" required>
-          <br/>
-          <label for="lastname">Last name:</label>
-          <input type="text" name="lastname" value="" id="lastname" required>
-          <br/>
-          <label for="email">Email:</label>
-          <input type="email" name="email" value="" id="email" required>
-          <br/>
-          <label for="birthdate">Birthdate:</label>
-          <input type="date" name="birthdate" value="" id="birthdate" required>
-          <br/>
-          <label for="adress">Adress:</label>
-          <input type="text" name="adress" value="" id="adress" required>
-          <br/>
-          <label>Profile picture *:</label>
-          <input type ="file" name="profile"  id="profile">
-          <br/>
-          <p id="optionaltxt">
-            Fields * is optional
-            <br/>
-            For the proper functioning of Cookie you need to use Fire Fox
-          </p>
-          <div id="termOfConditions">
-            <input type ="checkbox" name="conditions" value="" id="conditions" required>
-            <label>I have read and accept the terms of use</label>
-          </div>
-          <br/>
-          <input type ="reset" name="reset" value="Reset" >
-          <input type ="submit" name="submit" value="Save">
-          <br/>
-        </form>
-
-      </div>  <!--  End registerBox -->
-
-
-      <div id="loginBox">
-        <form onsubmit="loginForm(); return false">
-          <h4>Account Information</h4>
-          <label for="emailLogin">Email:</label>
-          <input type="email" name="emailLogin" value="" id="emailLogin" required>
-          <br/>
-          <label for="passwordLogin"> Password:</label>
-          <input type="password" name="passwordLogin" minlength="4" maxlength="8" pattern="[0-9a-z]+" value="" id="passwordLogin" required>
-          <br/>
-          <br/>
-          <input type ="reset" name="reset" value="Reset">
-          <input type ="submit" name="submit" value="Save">
-          <br/>
-        </form>
-      </div>  <!--  End loginBox -->
 
       <div id="searchBar">
-        <h2>Input the hotel or restaurant you want to search</h2>
-        <form>
-          <input type="text" placeholder="Name" name="search">
+
+        <div id="search">
           <button type="submit"><i class="fa fa-search"></i></button>
-          <input type="text" placeholder="Location" name="search">
-          <button type="submit"><i class="fa fa-search"></i></button>
-        </form>
-        <h2 id= "galleryH2">Nearby restaurants and hotels</h2>
-      </div>  <!--  End searchBar -->
-
-      <div id="gallery">
-        <div class="slider slider_circle">
-          <div>
-            <img src="images/IkosOlivia.png" alt="" width="400" height="250">
-            <h2>Ikos Olivia</h2>
-            <p>A wonderful choice of accommodation awaits with 142 bedrooms
-              and junior suites together with 149 private bungalow suites.
-            </p>
-          </div>
-          <div>
-            <img src="images/Shinta.png" alt="" width="400" height="250">
-            <h2>Shinta Mani Shack</h2>
-            <p>The Shinta Mani Shack is a boutique resort centrally located
-               in the leafy French Quarter between The Royal Gardens and the Old Market
-               Area just 15 minute from the Angkor Wat.
-            </p>
-          </div>
-          <div>
-            <img src="images/ExcellencePlayaMujeres.png" alt="" width="400" height="250">
-            <h2>Excellence Playa Mujeres</h2>
-            <p>Excellence Playa Mujeres setting is as stunning as it is exclus
-              ive, on a two-mile stretch of powdery virgin
-               white sand moments.
-            </p>
-          </div>
-          <div>
-            <img src="images/B&B.png" alt="" width="400" height="250">
-            <h2>B&B Hotel</h2>
-            <p>La ubicacion del B&B Hotel Madrid Centro Puerta
-              del Sol ofrece a los huespedes una verdadera experiencia en sus innovadoras habitaciones.
-            </p>
-          </div>
-          <div>
-            <img src="images/Santiagokyoto.png" alt="" width="400" height="250">
-            <h2>Santiag Okyoto</h2>
-            <p>El mas moderno y amplio de los restaurantes del grupo Sushidaki
-              con casi ocho años de experiencia han adquirido.
-            </p>
-          </div>
-          <div class="next_button"></div>
-          <div class="prev_button"></div>
         </div>
-      </div>  <!--  End gallery -->
+        <div id="byKeywords">
+          <div class="keyword">
+            <p id="place">En <b>Madrid</b></p>
+            <button onclick="">x</button>
+          </div>
+          <div class="keyword">
+            <p id="date">Desde el <b>26/11/2018</b> hasta el<b> 29/11/2018</b></p>
+            <button onclick="">x</button>
+          </div>
+          <div class="keyword">
+            <p id="person">Para 2 personas</p>
+            <button onclick="">x</button>
+          </div>
+        </div>
 
-    </section>
-
-
-    <footer>
-
-      <div class="copyright">
-        <p>Copyright @2018 All right reserved</p>
+      <div id="keyTitleHotel">
+        <h2>Hoteles mas buscados</h2>
       </div>
 
-      <div class="socialNet">
-        <img src="images/twitter.png" alt="twitter icon" width="30" height="30">
-        <img src="images/facebook.png" alt="facebook icon" width="30" height="30">
-        <img src="images/instagram.png" alt="instagram icon" width="30" height="30">
-        <img src="images/linkedin.png" alt="linkedin icon" width="30" height="30">
+      <div id="keyTitleExperience">
+        <h2>Experiencias mas reservadas</h2>
       </div>
-      <div class="hiddenFooter">
-        <div class="hiddenOp">
-          <img src="images/personal.png" alt="" width="40" height="40">
-          <p onclick="pInfoDetail()"><a href="#">personal</a></p>
+
+    </div>
+
+
+      <hr id="separated">
+
+
+    <div id="infoHotels">
+      <div id="hotelViaCastellana">
+        <div class="letter">
+          <h3>Hotel Via Castellana</h3>
+          <p>Charmartion, Madrid</p>
         </div>
-        <div class="hiddenOp">
-          <img src="images/opinions.png" alt="" width="40" height="40">
-          <p onclick="opinion()"><a href="#">opinions</a></p>
+        <div class="keywordIMG">
+          <p>Lujose</p>
         </div>
-        <div class="hiddenOp">
-          <img src="images/preferences.png" alt="" width="40" height="40">
-          <p>preferences</p>
+        <div class="keywordIMG">
+          <p>Madrid Centro</p>
+        </div>
+        <div class="keywordIMG">
+          <p>Recomendado</p>
         </div>
       </div>
-    </footer>  <!--Here ends the footer-->
+      <div class="description">
+        <p>
+          El Hotel Via Castellana esta en la zona financiera de Chamartion, en el Paseo de la Castellana de Madrid,
+           junto a las emblematicas torres Kio.
+        </p>
+
+        <h4 onclick="hotelViaCastellana()"><a href = "#">Mas Informacion</a></h4>
+        <img src="images/share.jpg">
+        <button onclick="addList1()">+</button>
+      </div>
+
+
+
+
+      <div id="HotelNH">
+        <div class="letter">
+          <h3>Hotel NH Principe de Vergara</h3>
+          <p>Principe de Vergara, Madrid</p>
+        </div>
+        <div class="keywordIMG">
+      <p>Elegante</p>
+        </div>
+        <div class="keywordIMG">
+          <p>Barrio de Salamana</p>
+        </div>
+        <div class="keywordIMG">
+              <p>Tranquilo</p>
+        </div>
+      </div>
+      <div class="description">
+        <p>
+          Este hotel de deseño esta situado en el elegante barrio de Salamanca de Madrid, a 200
+          metro de la esracion de metro Avenida de America.
+        </p>
+
+        <h4 onclick="hotelNH()"><a href = "#">Mas Informacion</a></h4>
+        <img src="images/share.jpg">
+        <button onclick="addList2()">+</button>
+      </div>
+
+
+
+
+      <div class="MasInformacion">
+        <h4 onclick="moreResult()"><a href = "#">Mas Resultados</a></h4>
+      </div>
+
+
+
+    </div>  <!-- end infoHotels -->
+
+
+
+    <div id="infoExperiences">
+
+      <div id="Tour">
+        <div class="letter">
+          <h3>Tour guiado por Madrid</h3>
+          <p>Madrid</p>
+        </div>
+        <div class="keywordIMG">
+          <p>Guiado</p>
+        </div>
+        <div class="keywordIMG">
+          <p>Madrid Centro</p>
+        </div>
+        <div class="keywordIMG">
+          <p>Recomendado</p>
+        </div>
+      </div>
+      <div class="description">
+        <p>
+          Disfruta de todos los rincones de Madrid centro en una visita guiada por toda la
+          zona en la que conoceras los rincones mas asombrosos de la ciudad.
+        </p>
+
+        <h4 onclick="Tour()"><a href = "#">Mas Informacion</a></h4>
+        <img src="images/share.jpg">
+        <button onclick="addList1()">+</button>
+      </div>
+
+
+
+
+      <div id="Bucea">
+        <div class="letter">
+          <h3>Bucea entre peces</h3>
+          <p>Guardamar, Alicante</p>
+        </div>
+        <div class="keywordIMG">
+      <p>Buceo</p>
+        </div>
+        <div class="keywordIMG">
+          <p>Acuatica</p>
+        </div>
+        <div class="keywordIMG">
+              <p>Mar</p>
+        </div>
+      </div>
+      <div class="description">
+        <p>
+          Disfruta de una experiencia distinta buceando entre peces por las playas de Guardamar en la
+          que podras ver muchas especies de peces distintas y conocer un poco la vida marina de la zona.
+        </p>
+
+        <h4 onclick="Bucea()"><a href = "#">Mas Informacion</a></h4>
+        <img src="images/share.jpg">
+        <button onclick="addList2()">+</button>
+      </div>
+
+
+      <div class="MasInformacion">
+        <h4 onclick="moreResult()"><a href = "#">Mas Resultados</a></h4>
+      </div>
+
+
+
+  </div>  <!-- End infoExperiences -->
+
+      <div id="añadirLista1">
+        <p>Lista de Favoritos</p>
+        <p>Lista colaborativa existente</p>
+        <p>Nueva lista Colaborativa</p>
+      </div>
+
+      <div id="añadirLista2">
+        <p>Lista de Favoritos</p>
+        <p>Lista colaborativa existente</p>
+        <p>Nueva lista Colaborativa</p>
+      </div>
+
+
+      <div id="optionSummer">
+
+        <div id="hotelViaCastellana">
+          <div class="letter">
+            <h3>Hotel Via Castellana</h3>
+            <p>Charmartion, Madrid</p>
+          </div>
+
+          <div class="keywordIMG">
+            <p>Lujose</p>
+          </div>
+          <div class="keywordIMG">
+            <p>Madrid Centro</p>
+          </div>
+          <div class="keywordIMG">
+            <p>Recomendado</p>
+          </div>
+            <h4 onclick="hotelViaCastellana()" class="seeMoreInfo"><a href = "#">Ver mas Informacion</a></h4>
+        </div>
+
+
+
+
+
+      <div id="Hideout">
+        <div class="letter">
+          <h3>Hideout Bali</h3>
+          <p>Bali</p>
+        </div>
+        <div class="keywordIMG">
+      <p>Naturaleza</p>
+        </div>
+        <div class="keywordIMG">
+          <p>Indonesia</p>
+        </div>
+        <div class="keywordIMG">
+              <p>Ecologico</p>
+        </div>
+          <h4 onclick="Hideout()" class="seeMoreInfo"><a href = "#">Ver mas Informacion</a></h4>
+      </div>
+
+
+      <div id="Villa">
+        <div class="letter">
+          <h3>Villa Amonteera</h3>
+          <p>Choeng Thale</p>
+        </div>
+        <div class="keywordIMG">
+      <p>Lujoso</p>
+        </div>
+        <div class="keywordIMG">
+          <p>Tailandia</p>
+        </div>
+        <div class="keywordIMG">
+              <p>Alternativo</p>
+        </div>
+          <h4 onclick="Villa()" class="seeMoreInfo"><a href = "#">Ver mas Informacion</a></h4>
+      </div>
+
+    </div>  <!-- End optionSummer -->
+
+
+
+
+
+
+    <div id="writeOpinionBox">
+      <form onsubmit="opinionForm(); return false">
+        <label>Tiempo de Estancia</label>
+        <div class="normalInput">
+          <input type="text" value="" required>
+        </div>
+        <label>Epoca del año </label>
+        <div class="normalInput">
+          <input type="text" value="" required>
+        </div>
+        <label>Idioma</label>
+        <div class="normalInput">
+          <input type="text" value="" required>
+        </div>
+        <label>Comentario</label>
+        <div id="commitsInput">
+          <input type="text" value="" required>
+        </div>
+
+
+        <div id="submitCommits">
+            <input type ="submit" value="Enviar Opinion">
+        </div>
+      </form>
+    </div>
+
+
+    <div id="gallery">
+      <!--轮播代码块开始-->
+      <div id="myslide_1" class="pic_container">
+            <ul class="pic_box size_box">
+        </ul>
+          <span class="btnl btns"></span> <span class="btnr btns"></span>
+          <div class="dots"></div>
+      </div>
+    <!--轮播代码块结束-->
+    </div>
+
+
+
+
+      <div id="detailInfoHotelsBox">
+          <h2 id="var1">Hotel Via Castellana</h2>
+          <button>+</button>
+          <img src="images/share.jpg" id="share">
+          <div class="keywordRight">
+            <p id="var2">Lujoso</p>
+          </div>
+          <div class="keywordRight">
+            <p id="var3">Madrid Centro</p>
+          </div>
+          <div class="keywordRight">
+            <p id="var4">Recomendado</p>
+          </div>
+          <div class="text">
+            <p id="var5">Charmartin, Madrid</p>
+            <p id="var6">
+              El Hotel Via Castellana esta en la zona financiera de Chamartin, en el Paseo de la Castellana de Madrid,
+               junto a las emblematicas torres Kio.
+            </p>
+            <h3>Precio</h3>
+            <p id="price">240 € en total</p>
+            <p id="reservar">Reservar<p>
+          </div>
+
+
+
+
+
+          <div id="commits1">
+            <img src="images/natalieDormer.jpg" width="70px" height="70px">
+            <h4>Natalie Dormer</h4>
+            <p>Estancia perfecto en el hotel, muy recomendado si vistas Madrid</p>
+          </div>
+
+          <div id="commits2">
+            <img src="images/ramiMalek.jpg" width="70px" height="70px">
+            <h4>Rami Malek</h4>
+            <p>Mi hotel favorito de todo Madrid, muy silencioso para trabajar</p>
+          </div>
+
+          <div class="buttonBlue">
+            <p onclick="addOpinion()"><a href ="#">Añadir Opinion</a></p>
+          </div>
+
+          <div id="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3035.3380359465227!2d-3.690522284292756!3d40.46778606045606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42284175bfffff%3A0xa9501caab89416ac!2sHotel+Via+Castellana!5e0!3m2!1sen!2ses!4v1543626859984"
+             width="90%" height="170" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
+
+
+
+
+      </div>  <!-- end detailInfoHotelsBox -->
+
+
+      <div id="ayuda">
+        <div class="ayudaDad">
+           <h1 class= "bgGrey">Ayuda! Necesito modificar o cancelar mi reserva!</h1>
+          <hr>
+          <h2 class="ayudaChilds">
+            Si reservaste tu viaje en la WEB de DISCOVER con uno de nuestros proveedores, puedes acudir a Reservas para pedir mas informacion
+            sobre el servicio de atencion al cliente disponible las 24 horas. Si reservaste tu viaje fuera de DISCOVER o se te redirigio a la pagina
+            del proveedor para completar la reserva, entonces debes contactar directamente con este ultimo. No recuerdas con que empresa
+            reservaste? Comprueba el carga realizado a tu tarjeta de credito.
+          </h2>
+        </div>
+
+        <div class="ayudaDad">
+           <h1 class= "bgGrey">Como creo yo una alerta de precios?</h1>
+          <hr>
+          <h2 class="ayudaChilds">
+            Muy sencillo, una vez registrado con tu cuenta si añades un hotel a una lista recibirás notificaciones en tu correo asociado si el precio de este baja. De esta forma podrás enterarte de cuando es el mejor momento para reservar.
+          </h2>
+        </div>
+
+
+        <div class="ayudaDad">
+           <h1 class= "bgGrey">En que se base la categoria dada a cada hotel?</h1>
+          <hr>
+          <h2 class="ayudaChilds">
+            La categoría de cada hotel se basa en diferentes criterios como la ubicación de este, la descripción del hotel por el propio equipo que lo forma y la opinión de los clientes, todo ello siempre cerciorandonos de que es información legítima
+          </h2>
+        </div>
+
+        <div class="ayudaDad">
+           <h1 class= "bgGrey">Como se que las opiniones de un hotel son legitimas?</h1>
+          <hr>
+          <h2 class="ayudaChilds">
+            Todas las opiniones de los usuarios son revisadas diariamente por un equipo directamente dedicado a ello, cualquier opinión sospechosa por dudosa credibilidad es quitada de la página hasta que finalmente se verifica si es verdad o no
+          </h2>
+        </div>
+
+
+        </div>
+      </div>  <!-- ayuda -->
+
+
+
+      <div id="perfil">
+        <img id="profileImage" src = "images/natalieDormer.jpg" width="250px" height="250px">
+        <p id="nameProfile">name</p>
+        <p  id="editInfo"><a href = "#">Editar informacion Personal</a></p>
+        <div id="summer">
+        <div class="letter">
+          <h3>Opciones para verano</h3>
+          <p>Lista colaborativa</p>
+        </div>
+
+      </div>
+      <div id="colaborator">
+        <h3>Colaboradores</h3>
+        <img src = "images/ramiMalek.jpg" width="60px" height="60px">
+        <img src = "images/natalieDormer.jpg" width="60px" height="60px">
+      </div>
+
+      <h4 id="morelist" class="masSummer" onclick="moreResult()"><a href = "#">Ver Lista Completa</a></h4>
+      <div>
+        <h4 id="completeList" class="masSummer" onclick="moreResult()"><a href = "#">Ver todas las Listas</a></h4>
+      </div>
+
+
+      </div>  <!-- end perfil -->
+
+
+      </div>  <!-- end subMain -->
+
+
+
+        <div id="registerPage">
+          <div id="logoRegister">
+            <img src = "images/whiteLogo.png" width="110px" height="90px">
+          </div>
+          <div id="logonameRegister">
+            <h2>DISCOVER</h2>
+          </div>
+
+             <div id = "registerBox">
+              <h3>Registrete y comienza a disfrutar ya!</h3>
+              <div id = "rBox">
+                <form onsubmit="registerForm(); return false">
+                  <label>Nombre y apellido</label>
+                  <div id="div1">
+                    <input type="text" value="" name="name" id="name"required>
+                  </div>
+
+                  <div class="left">
+                    <label>Correo</label>
+                  </div>
+                  <div class="right">
+                    <label>Nombre de Usuario</label>
+                  </div>
+                  <div class="left">
+                    <input type="text" value="" name="email" id = "email" required>
+                  </div>
+                  <div class="right">
+                    <input type="text" value="" name="username" id="username" required>
+                  </div>
+
+                  <div class="left">
+                    <label>DNI</label>
+                  </div>
+                  <div class="right">
+                    <label>Contraseña</label>
+                  </div>
+                  <div class="left">
+                    <input type="text" value="" name="dni" id="dni" required>
+                  </div>
+                  <div class="right">
+                    <input type="password" value="" name="password" id="password" required>
+                  </div>
+
+                  <div class="left">
+                    <label>Fecha de Nacimiento</label>
+                  </div>
+                  <div class="right">
+                    <label>Lugar de nacimiento</label>
+                  </div>
+                  <div class="left">
+                    <input type="text" value="" name="birthdate" id = "birthdate" required>
+                  </div>
+                  <div class="right">
+                    <input type="text" value="" name="country" id="country" required>
+                  </div>
+
+
+
+                  <div id="Submit">
+                      <input type ="submit" value="Registrarse">
+                  </div>
+                </form>
+
+              </div>
+            </div>
+
+        </div>
+
+
+         <div id="loginPage">
+          <div id="logoLogin">
+            <img src = "images/whiteLogo.png" width="110px" height="90px">
+          </div>
+          <div id="logonameLogin">
+            <h2>DISCOVER</h2>
+          </div>
+
+             <div id = "loginBox">
+              <h3>Disfruta de miles de experiencias!</h3>
+              <div id = "lBox">
+                <form onsubmit="loginForm(); return false">
+                  <label>Nombre de Usuario</label>
+                  <div id="div1">
+                    <input type="text" value="" name= "nameLogin" id="nameLogin"required>
+                  </div>
+                  <label>Contraseña</label>
+                  <div id="div1">
+                    <input type="password" value="" name="passwordLogin" id="passwordLogin"required>
+                  </div>
+                  <p id="forget">¿Has olvidado tu contraseña?</p>
+                  <div id="Submit">
+                      <input type ="submit" value="Iniciar Sesion">
+                  </div>
+                </form>
+
+              </div>
+            </div>
+        </div>
+
+
 
   </body>
 </html>

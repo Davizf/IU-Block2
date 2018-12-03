@@ -1,0 +1,1028 @@
+#html{
+  font-family:  Arial;
+}
+
+#main{
+  background: url(images/mainBackground.jpg) no-repeat center center fixed;
+  height: 1120px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#logo{
+  margin-left: 14%;
+  margin-top: 2%;
+  float: left;
+
+}
+#logoname{
+  margin-left: 2%;
+  margin-top: 1%;
+  float: left;
+  font-size: 25px;
+  color: #FFFFFF;
+}
+
+#menuMain img{
+  margin: 20px;
+  float: right;
+}
+
+.menu{
+  float: right;
+  margin: 15px 10px;
+}
+
+.menu ul li{
+  list-style: none;
+  float: left;
+}
+
+.menu ul li a{
+  text-decoration: none;
+  padding: 10px;
+  font-size: 18px;
+
+  color: #FFFFFF;
+}
+
+
+#softwareStore{
+  clear: both;
+  float: right;
+
+  margin-right: 1%;
+}
+
+#searchBox{
+  clear: both;
+  width: 28%;
+  margin-left: 17%;
+  padding-top: 5%;
+}
+
+#searchBox h2{
+  color: #FFFFFF;
+  font-size: 25px;
+}
+
+#sBox{
+  padding-left: 5%;
+  padding-top: 5%;
+  padding-right: 5%;
+  padding-bottom: 5%;
+  background-color: #FBFBFB;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+#sBox input{
+  border: none;
+  background-color: #EEEEEE;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  padding-top: 3%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#div1 input{
+  width: 100%;
+}
+
+.left label{
+  float: left;
+  width: 48%;
+}
+
+.right label{
+  float: right;
+  width: 48%;
+}
+
+.left input{
+  float: left;
+  width: 48%;
+}
+
+.right input{
+  float: right;
+  width: 48%;
+}
+
+#div4 {
+  clear: both;
+}
+#div4 input{
+  width: 50%;
+}
+#Submit input{
+  padding-top: 2%;
+  padding-bottom: 2%;
+  color: #FFFFFF;
+  font-size: 18px;
+  background-color: #687FEA;
+  width: 100%;
+}
+
+#politicaCookies{
+  float: left;
+  margin: 10%;
+  width: 60%;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+#politicaCookies p{
+  padding-left: 3%;
+  font-size: 15px;
+  float: left;
+}
+#politicaCookies img{
+  padding-left: 5%;;
+  float: left;
+}
+
+
+/***************************************** End main*****************************************************************/
+
+#logoBlue{
+  margin-left: 4%;
+  margin-top: 1%;
+  float: left;
+}
+#logonameBlue{
+  margin-left: 2%;
+  margin-top: 0%;
+  float: left;
+  font-size: 25px;
+
+}
+
+#logonameBlue a{
+  text-decoration: none;
+  color: #6780D2;
+}
+
+#menuMainBlue img{
+  margin: 20px;
+  float: right;
+}
+.menuBlue{
+  float: right;
+  margin: 15px 10px;
+}
+
+.menuBlue ul li{
+  list-style: none;
+  float: left;
+}
+
+.menuBlue ul li a{
+  text-decoration: none;
+  padding: 10px;
+  font-size: 18px;
+  color: #6780D2;
+}
+
+
+
+#search{
+  clear: both;
+  float: left;
+  margin-right: 2%;
+}
+#search button {
+  margin-top: 35px;
+  margin-left: 50px;
+  background: #FFFFFF;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+  color: #646464;
+}
+
+
+.keyword{
+  margin: 2%;
+  height: 40px;
+  float: left;
+  background-color: #EEEEEE;
+  border-spacing: 15px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  border-radius: 5px;
+}
+.keyword p{
+  padding-left: 10px;
+  float: left;
+}
+.keyword button{
+  margin: 15px;
+  float: right;
+  background-color: #EEEEEE;
+  border: none;
+  font-size: 20px;
+}
+
+#keyTitleHotel{
+  float: left;
+  margin: 20px;
+  color: #6780D2;
+  display: none;
+}
+
+#keyTitleExperience{
+  float: left;
+  margin: 20px;
+  color: #6780D2;
+  display: none;
+}
+
+
+#separated{
+  clear: both;
+  border:none;
+  /*height: 50px;*/
+  border-bottom: 1px solid #CCC;
+  box-shadow: 0 20px 20px -20px #CCC;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+#hotelViaCastellana{
+  border-radius: 10px;
+  background-image: url("images/hotelViaCastellana.jpg");
+  width: 95%;
+  margin-left: 2.5%;
+  height: 175px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  color: #FFFFFF;
+}
+
+.letter{
+  padding: 5px;
+  margin-left: 25px;
+}
+
+
+.keywordIMG p{
+  color: #000;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  float: left;
+  margin-left: 25px;
+  background-color: #EEEEEE;
+  border-radius: 10px;
+}
+
+.description{
+  margin-top: 10px;
+  margin-left: 75px;
+}
+
+.description p{
+  float: left;
+  width: 50%;
+}
+.description button{
+  border: none;
+  background-color: #FFFFFF;
+  font-size: 40px;
+  color:  #6780D2;
+  float: right;
+  margin: 20px;
+}
+.description img{
+  width: 25px;
+  float: right;
+  margin: 30px;
+}
+.description h4{
+  margin-right: 50px;
+  color: #FFFFFF;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+  background-color:  #7392F7;
+  float: right;
+}
+
+
+#HotelNH{
+  clear: both;
+  border-radius: 10px;
+  background-image: url("images/hotelNH.jpg");
+  width: 95%;
+  margin-left: 2.5%;
+  height: 175px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  color: #FFFFFF;
+}
+
+.MasInformacion h4{
+  clear: both;
+  color: #FFFFFF;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+  background-color:  #7392F7;
+  width: 7%;
+  margin-left: 43%;
+}
+
+#añadirLista1{
+  width: 250px;
+  position: absolute;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  padding-top: 1px;
+  padding-left: 20px;
+  padding-bottom: 1px;
+  border-radius: 10px;
+  margin-left: 80%;
+  margin-top: -23%;
+  background-color: #FFFFFF;
+  display: none;
+}
+
+#añadirLista2{
+  width: 250px;
+  position: absolute;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  padding-top: 1px;
+  padding-left: 20px;
+  padding-bottom: 1px;
+  border-radius: 10px;
+  margin-left: 80%;
+  margin-top: -9%;
+  background-color: #FFFFFF;
+  display: none;
+}
+
+#infoHotels{
+  display: none;
+}
+/********************************* End inforHotels*******************************************/
+
+#Tour{
+  border-radius: 10px;
+  background-image: url("images/Tour.jpg");
+  width: 95%;
+  margin-left: 2.5%;
+  height: 175px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  color: #FFFFFF;
+}
+
+
+#Bucea{
+  clear: both;
+  border-radius: 10px;
+  background-image: url("images/Bucea.jpg");
+  width: 95%;
+  margin-left: 2.5%;
+  height: 175px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  color: #FFFFFF;
+}
+
+#infoExperiences{
+  display: none;
+}
+
+/********************************* End inforExperiences *******************************************/
+#infoHotels a{
+  text-decoration: none;
+  color: #FFFFFF;
+}
+#infoExperiences a{
+  text-decoration: none;
+  color: #FFFFFF;
+}
+#optionSummer{
+  clear: both;
+}
+#optionSummer a{
+  text-decoration: none;
+  color: #FFFFFF;
+}
+#detailInfoHotelsBox a{
+  text-decoration: none;
+  color: #FFFFFF;
+}
+#hotelViaCastellana{
+  border-radius: 10px;
+  background-image: url("images/hotelViaCastellana.jpg");
+  width: 95%;
+  margin-left: 2.5%;
+  height: 175px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  color: #FFFFFF;
+  margin-bottom: 30px;
+}
+
+#Hideout{
+  clear: both;
+  border-radius: 10px;
+  background-image: url("images/hideout.PNG");
+  width: 95%;
+  margin-left: 2.5%;
+  height: 175px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  color: #FFFFFF;
+    margin-bottom: 30px;
+}
+
+#Villa{
+    clear: both;
+  border-radius: 10px;
+  background-image: url("images/villa.PNG");
+  width: 95%;
+  margin-left: 2.5%;
+  height: 175px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  color: #FFFFFF;
+    margin-bottom: 30px;
+}
+
+.seeMoreInfo{
+  color: #FFFFFF;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 10px;
+  background-color:  #7392F7;
+  width: 10%;
+  float: right;
+  margin-right: 30px;
+  margin-top: -45px;
+}
+
+#optionSummer{
+  display: none;
+}
+
+
+/********************************* End optionSummer *******************************************/
+#writeOpinionBox{
+  float: left;
+  width: 25%;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  border-radius: 10px;
+  margin-left: 3%;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  height: 650px;
+  margin-bottom: 20px;
+}
+
+#writeOpinionBox input{
+  border: none;
+  background-color: #EEEEEE;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  padding-top: 3%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+.normalInput input{
+  width: 100%;
+  font-size: 20px;
+}
+#commitsInput input{
+  width: 100%;
+  height: 250px;;
+}
+#submitCommits input{
+  padding-top: 2%;
+  padding-bottom: 2%;
+  color: #FFFFFF;
+  font-size: 18px;
+  background-color: #7392F7;;
+  width: 100%;
+}
+
+#detailInfoHotelsBox{
+  width: 64%;
+  float: right;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  border-radius: 10px;
+  margin-right: 3%;
+  height: 690px;
+}
+
+#detailInfoHotelsBox h2{
+  padding: 30px;
+  float: left;
+}
+
+#detailInfoHotelsBox button{
+  border: none;
+  background-color: #FFFFFF;
+  font-size: 40px;
+  color:  #6780D2;
+  float: left;
+  margin: 40px;
+  margin-left: -10px;
+}
+#share{
+  width: 25px;
+  float: left;
+  margin: 50px;
+    margin-left: -12px;
+}
+.keywordRight p{
+  color: #000;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  float: left;
+  margin-top: 45px;
+  margin-right: 20px;
+  background-color: #EEEEEE;
+  border-radius: 10px;
+}
+
+.text{
+  clear: both;
+  margin-left: 30px;
+}
+#price{
+  float: left;
+}
+#reservar{
+  color: #FFFFFF;
+  padding-left: 20px;
+  padding-right: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 10px;
+  background-color:  #7392F7;
+  width: 50px;;
+  float: left;
+  margin-left: 5%;
+  margin-top: 10px;
+}
+
+#commits1{
+  clear: both;
+  width: 40%;
+  float: left;
+  margin-left: 5%;
+  margin-bottom: 20px;
+}
+#commits1 img{
+  float: left;
+}
+#commits1 h4{
+  float: left;
+  margin-left: 20px;
+  margin-top: -10px;
+}
+#commits1 p{
+  width: 70%;
+  float: left;
+  margin-left: -123px;
+}
+
+#commits2{
+  width: 40%;
+  float: left;
+  margin-left: 5%;
+  margin-bottom: 20px;
+}
+#commits2 img{
+  float: left;
+}
+#commits2 h4{
+  float: left;
+  margin-left: 20px;
+  margin-top: -10px;
+}
+#commits2 p{
+  width: 70%;
+  float: left;
+  margin-left: -94px;
+}
+.buttonBlue p{
+  clear: both;
+  color: #FFFFFF;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+  background-color:  #7392F7;
+  width: 10%;
+  margin-left: 38%;
+}
+
+#map{
+  margin-left: 5%;
+}
+
+#writeOpinionBox{
+  display: none;
+}
+
+/*********************************** gallery *******************/
+#gallery{
+  clear: both;
+  float: left;
+  width: 25%;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  border-radius: 10px;
+  margin-left: 3%;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  height: 650px;
+}
+
+
+
+
+.pic_container {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+}
+.pic_container .pic_box {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0;
+    overflow: hidden;
+}
+.pic_container .pic_box .size_pic {
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+.pic_container .pic_box li {
+    display: inline-block;
+}
+.pic_container .btnl {
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: #333;
+	background-image: url(images/btn_l_bg.png);
+	background-repeat: no-repeat;
+	background-position: center;
+    opacity: 0;
+    position: absolute;
+    cursor: pointer;
+}
+.pic_container .btnr {
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: #333;
+	background-image: url(images/btn_r_bg.png);
+	background-repeat: no-repeat;
+	background-position: center;
+    opacity: 0;
+    position: absolute;
+    cursor: pointer;
+}
+.pic_container .dots span {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 7px;
+    background: #bebebd;
+    margin: 0 10px 0 10px;
+    cursor: pointer;
+}
+.pic_container .dots {
+    position: absolute;
+    font-size: 0;
+}
+.pic_container .dots .dot_now {
+    background: #ff4200;
+}
+.pic_container .deep {
+    background-color: #333;
+    opacity: 0.6;
+    -webkit-transition: opacity 0.3s ease-in-out;
+	-moz-transition: opacity 0.3s ease-in-out;
+	transition: opacity 0.3s ease-in-out;
+}
+/*************************** End gallery ****************************************/
+
+#gallery{
+  margin-bottom: 20px;
+  display: none;
+}
+#detailInfoHotelsBox{
+  display: none;
+}
+#submainBar{
+  display: none;
+}
+#searchBar{
+  display: none;
+}
+#separated{
+  display: none;
+}
+#var6{
+	width: 90%;
+}
+
+
+
+/* Register BOX*/
+#registerPage{
+  background: url(images/mainBackground.jpg) no-repeat center center fixed;
+  height: 1120px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: none;
+}
+#logoRegister{
+  margin-left: 35%;
+  margin-top: 8%;
+  float: left;
+
+}
+#logonameRegister{
+  margin-left: 2%;
+  margin-top: 7%;
+  float: left;
+  font-size: 35px;
+  color: #FFFFFF;
+}
+
+#registerBox{
+  clear: both;
+  width: 28%;
+  margin-left: 35%;
+  padding-top: 2%;
+}
+
+#registerBox h3{
+  color: #FFFFFF;
+  font-size: 30px;
+}
+
+#rBox{
+  padding-left: 5%;
+  padding-top: 5%;
+  padding-right: 5%;
+  padding-bottom: 5%;
+  background-color: #FBFBFB;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+#rBox input{
+  border: none;
+  background-color: #EEEEEE;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  padding-top: 3%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#Submit input{
+  padding-top: 2%;
+  padding-bottom: 2%;
+  color: #FFFFFF;
+  font-size: 18px;
+  background-color: #687FEA;
+  width: 100%;
+}
+
+/* login Page*/
+
+/* Register BOX*/
+#loginPage{
+  background: url(images/slb2.png) no-repeat center center fixed;
+  height: 1120px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: none;
+}
+#logoLogin{
+  margin-left: 35%;
+  margin-top: 8%;
+  float: left;
+
+}
+#logonameLogin{
+  margin-left: 2%;
+  margin-top: 7%;
+  float: left;
+  font-size: 35px;
+  color: #FFFFFF;
+}
+
+#loginBox{
+  clear: both;
+  width: 28%;
+  margin-left: 35%;
+  padding-top: 2%;
+}
+
+#loginBox h3{
+  color: #FFFFFF;
+  font-size: 30px;
+}
+
+#lBox{
+  padding-left: 5%;
+  padding-top: 5%;
+  padding-right: 5%;
+  padding-bottom: 5%;
+  background-color: #FBFBFB;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+#lBox input{
+  border: none;
+  background-color: #EEEEEE;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  padding-top: 3%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#Submit input{
+  padding-top: 2%;
+  padding-bottom: 2%;
+  color: #FFFFFF;
+  font-size: 18px;
+  background-color: #687FEA;
+  width: 100%;
+}
+
+#forget{
+  color: #687FEA;
+}
+
+/*   Seccion de ayuda */
+
+#ayuda{
+  width: 90%;
+  margin-left: 5%;
+  clear: both;
+  display: none;
+}
+
+.ayudaDad{
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  margin-bottom: 40px;
+}
+
+.bgGrey{
+  background-color: #FBFBFB;
+  padding-top: 20px;
+  padding-left: 50px;
+  padding-right: 20px;
+  font-size: 25px;
+}
+.ayudaChilds{
+  padding-left: 50px;
+  padding-bottom: 50px;
+  padding-right: 20px;
+  font-size: 20px;
+}
+
+#userICONBLUE{
+  margin-top: -10px;
+  display: none;
+}
+
+#userICONWHITE{
+  display: none;
+}
+#changePro1{
+  display: none;
+}
+
+#changePro2{
+  display: none;
+}
+
+/* Profile*/
+#profileImage{
+  clear: both;
+  margin-left: 40%;
+}
+
+#nameProfile{
+  clear: both;
+  margin-left: 44%;
+  font-size: 35px;
+}
+#editInfo a{
+  margin-left: 42%;
+  color: #687FEA;
+  text-decoration: none;
+}
+
+#summer{
+  clear: both;
+  border-radius: 10px;
+  background-image: url("images/Bucea.jpg");
+  width: 95%;
+  margin-left: 2.5%;
+  height: 175px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  color: #FFFFFF;
+}
+
+.masSummer {
+  color: #FFFFFF;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 10px;
+  background-color:  #7392F7;
+  width: 10%;
+  float: right;
+  margin-right: 30px;
+  margin-top: -45px;
+
+}
+
+#colaborator h3{
+  margin-top: 2%;
+  margin-left: 5%;
+  float: left;
+}
+#colaborator img{
+  margin: 1%;
+  float: left;
+}
+
+.masSummer a{
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+#morelist{
+  margin-top: 1%;
+  float: right;
+}
+#completeList{
+  margin-top: 9%;
+  margin-right: 25%;
+}
+
+#perfil{
+  clear: both;
+  display: none;
+}
